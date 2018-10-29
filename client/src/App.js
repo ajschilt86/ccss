@@ -9,7 +9,6 @@ class App extends Component {
       <div className="App">
         <Nav/>
         <header className="App-header">
-          
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
