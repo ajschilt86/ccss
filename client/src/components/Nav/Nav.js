@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nav = () => {
+const Nav = () => (
 
     <div className="container">
         <ul className="sidenav" id="slide-out">
@@ -29,6 +29,6 @@ const Nav = () => {
         <a href="/" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
     </div>
 
-}
+)
 
 export default Nav;
