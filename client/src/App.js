@@ -1,29 +1,18 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Nav from "./components/Nav"
+import Nav from "./components/Nav";
+import Profile from "./pages/Profile";
 
-class App extends Component {
-  render() {
-    return (
-      
-      <div className="App">
-        <Nav/>
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div className="App">
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Profile} />
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
