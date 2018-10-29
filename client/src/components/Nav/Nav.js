@@ -1,32 +1,26 @@
 import React from "react";
+import { SideNav, SideNavItem, Button } from 'react-materialize'
 
-const Nav = () => (
-    <div className="container">
-        <ul className="sidenav" id="slide-out">
-            <li>
-                <div className="user-view">
-                    <img className="circle" />
-                    <ul>
-                        <li className="white-text">Noah Yong Simon</li>
-                        <li className="white-text">Noah@noah.com</li>
-                        <li className="white-text">(555)555-5555</li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="/">My Answers</a>
-            </li>
-            <li>
-                <div className="divider"></div>
-            </li>
-            <li><a href="/">30 Second Pitch</a></li>
-            <li><a href="/">What are your skills?</a></li>
-            <li><a href="/">What skills are you looking for?</a></li>
-            <li><a href="/">What do you value?</a></li>
-            <li><a href="/">What is your passion?</a></li>
-        </ul>
-        <a href="/" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
-    </div>
+export default () => (
+    <SideNav
+        trigger={<Button>SIDE NAV DEMO</Button>}
+        options={{ closeOnClick: true }}
+    >
+        <SideNavItem userView
+            user={{
+                background: 'img/office.jpg',
+                image: 'img/yuna.jpg',
+                name: 'John Doe',
+                email: 'jdandturk@gmail.com'
+            }}
+        />
+        <SideNavItem href='#!second'>My Profile</SideNavItem>
+        <SideNavItem divider />
+        <SideNavItem href='#!second'>30 Second Pitch</SideNavItem>
+        <SideNavItem href='#!second'>My Skills</SideNavItem>
+        <SideNavItem href='#!second'>My Passions</SideNavItem>
+        <SideNavItem href='#!second'>My Values</SideNavItem>
+        <SideNavItem href='#!second'>Skills I am looking for</SideNavItem>
+    </SideNav>
 )
 
-export default Nav;
