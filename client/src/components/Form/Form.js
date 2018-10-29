@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Input } from 'react-materialize'
+import { Row, Input, Button } from 'react-materialize'
 
 const Form = props => (
     <div>
@@ -12,10 +12,23 @@ const Form = props => (
         </Row>
         <Row>
             <Input placeholder="Placeholder" s={12} label="30 Second Pitch" />
+            <Button waves='light'>button</Button>
+        </Row>
+        <Row>
             <Input placeholder="Placeholder" s={12} label="My Skills" />
+            <Button waves='light'>button</Button>
+        </Row>
+        <Row>
             <Input placeholder="Placeholder" s={12} label="My Passions" />
+            <Button waves='light'>button</Button>
+        </Row>
+        <Row>
             <Input placeholder="Placeholder" s={12} label="My Values" />
+            <Button waves='light'>button</Button>
+        </Row>
+        <Row>
             <Input placeholder="Placeholder" s={12} label="Help I Need" />
+            <Button waves='light'>button</Button>
         </Row>
     </div>
 );
