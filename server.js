@@ -22,10 +22,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Use deployed database, otherwise use CCSSUser database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/CCSSUser";
-
-// Connect to Mongo DB
-mongoose.connect(MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/CCSSUser");
 
 // Start the API server
 app.listen(PORT, () =>
