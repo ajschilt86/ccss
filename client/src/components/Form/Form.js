@@ -11,24 +11,24 @@ const Form = props => (
             </Input>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="30 Second Pitch" />
-            <Button waves='light'>button</Button>
+            <Input placeholder="Placeholder" s={12} label="30 Second Pitch" id="questionOneAnswer"/>
+            <Button waves='light' id="questionOne">button</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="My Skills" />
-            <Button waves='light'>button</Button>
+            <Input placeholder="Placeholder" s={12} label="My Skills" id="questionTwoAnswer"/>
+            <Button waves='light' id="questionTwo">button</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="My Passions" />
-            <Button waves='light'>button</Button>
+            <Input placeholder="Placeholder" s={12} label="My Passions" id="questionThreeAnswer"/>
+            <Button waves='light' id="questionThree">button</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="My Values" />
-            <Button waves='light'>button</Button>
+            <Input placeholder="Placeholder" s={12} label="My Values" id="questionFourAnswer"/>
+            <Button waves='light' id="questionFour">button</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="Help I Need" />
-            <Button waves='light'>button</Button>
+            <Input placeholder="Placeholder" s={12} label="Help I Need" id="questionFiveAnswer"/>
+            <Button waves='light' id="questionFive">button</Button>
         </Row>
     </div>
 );
