@@ -1,5 +1,8 @@
 const db = require("../models");
 
 module.exports = {
-    find
+    findAll: (req, res) => {
+        db.answerSchema
+            .find(req.query)
+    }
 }
