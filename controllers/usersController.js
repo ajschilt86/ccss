@@ -5,25 +5,31 @@ module.exports = {
         db.Answers
             .find(req.query)
             .sort({ date: -1 })
-            .then(dbModel => res.json(dbModel))
+            .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     },
-    findById: (req, res) => {
+    findByQuest: (req, res) => {
         db.Answers
-            .findById(req.params.id)
-            .then(dbModel => res.json(dbModel))
+            .findByQuest({question: req.params.id})
+            .then(dbAnswers => res.json(dbAnswers))
+            .catch(err => res.status(422).json(err));
+    },
+    findByUID: (req, res) => {
+        db.Answers
+            .findById({UID: req.params.id})
+            .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     },
     create: (req, res) => {
         db.Answers
             .create(req.body)
-            .then(dbModel => res.json(dbModel))
+            .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     },
     update: (req, res) => {
         db.Answers
             .findOneAndUpdate({ _id: req.params.id }, req.body)
-            .then(dbModel => res.json(dbModel))
+            .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     }
 }

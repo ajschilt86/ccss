@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import Form from "../../components/Form";
 
 
-class Home extends Component {
+class Profile extends Component {
+
+
+
+
     render() {
         return (
             <Form />
@@ -10,4 +14,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Profile;
