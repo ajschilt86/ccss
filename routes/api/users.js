@@ -1,11 +1,14 @@
 const router = requrie("express").Router();
 const userController = require("../../controllers/usersController");
 
-// Need to put a route here for displaying the quesitons...
+router
+    .route("questions/:id")
+    .get(userController.findByQuest)
 
 router
-    .route("/:id")
-    .get(userController.findById)
+    .route("users/:id")
+    .get(userController.findByUID)
+    .post(userController.create)
     .put(userController.update)
 
 module.exports = router;
