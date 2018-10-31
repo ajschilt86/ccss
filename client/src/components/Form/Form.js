@@ -11,24 +11,24 @@ const Form = props => (
             </Input>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="30 Second Pitch" id="questionOneAnswer"/>
-            <Button waves='light' id="questionOne">button</Button>
+            <Input value={this.state.questionOneAnswer} s={12} label="30 Second Pitch" id="questionOneAnswer" name="questionOneAnswer" onChange={this.handleInputChange}/>
+            <Button waves='light' id="questionOne" onClick={this.handleFormSubmit}>save</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="My Skills" id="questionTwoAnswer"/>
-            <Button waves='light' id="questionTwo">button</Button>
+            <Input value={this.state.questionTwoAnswer} s={12} label="My Skills" id="questionTwoAnswer"/>
+            <Button waves='light' id="questionTwo">save</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="My Passions" id="questionThreeAnswer"/>
-            <Button waves='light' id="questionThree">button</Button>
+            <Input value={this.state.questionThreeAnswer} s={12} label="My Passions" id="questionThreeAnswer"/>
+            <Button waves='light' id="questionThree">save</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="My Values" id="questionFourAnswer"/>
-            <Button waves='light' id="questionFour">button</Button>
+            <Input value={this.state.questionFourAnswer} s={12} label="My Values" id="questionFourAnswer"/>
+            <Button waves='light' id="questionFour">save</Button>
         </Row>
         <Row>
-            <Input placeholder="Placeholder" s={12} label="Help I Need" id="questionFiveAnswer"/>
-            <Button waves='light' id="questionFive">button</Button>
+            <Input value={this.state.questionFiveAnswer} s={12} label="Help I Need" id="questionFiveAnswer"/>
+            <Button waves='light' id="questionFive">save</Button>
         </Row>
     </div>
 );
