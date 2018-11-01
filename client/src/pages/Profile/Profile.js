@@ -6,12 +6,12 @@ class Profile extends Component {
 
     //these are the dynamic elements on the profile page    
     state = {
-        questionOneAnswer: "",
-        questionTwoAnswer: "",
-        questionThreeAnswer: "",
-        questionFourAnswer: "",
-        questionFiveAnswer: "",
+        
     };
+
+    handleAnswerUpdate = () => {
+        this.setState({})
+    }
 
     //waits for component to mount
     componentDidMount() {
@@ -33,7 +33,7 @@ class Profile extends Component {
         event.preventDefault();
         if (this.state.questionOneAnswer) {
             API.saveAnswers({
-                questionOneAnswer: this.state.questionOneAnswer,
+                questionResponse: event.target.questionOneAnswer,
                 UID: this.state.questionOneAnswer,
                 Email: this.state.questionOneAnswer,
                 Industry: this.state.questionOneAnswer,
@@ -43,66 +43,10 @@ class Profile extends Component {
         }
     };
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.questionOneAnswer) {
-            API.saveAnswers({
-                questionTwoAnswer: this.state.questionTwoAnswer,
-                UID: this.state.questionTwoAnswer,
-                Email: this.state.questionTwoAnswer,
-                Industry: this.state.questionTwoAnswer,
-            })
-                .then(res => this.loadProfile())
-                .catch(err => console.log(err));
-        }
-    };
-
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.questionOneAnswer) {
-            API.saveAnswers({
-                questionThreeAnswer: this.state.questionThreeAnswer,
-                UID: this.state.questionThreeAnswer,
-                Email: this.state.questionThreeAnswer,
-                Industry: this.state.questionThreeAnswer,
-            })
-                .then(res => this.loadProfile())
-                .catch(err => console.log(err));
-        }
-    };
-
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.questionOneAnswer) {
-            API.saveAnswers({
-                questionFourAnswer: this.state.questionFourAnswer,
-                UID: this.state.questionFourAnswer,
-                Email: this.state.questionFourAnswer,
-                Industry: this.state.questionFourAnswer,
-            })
-                .then(res => this.loadProfile())
-                .catch(err => console.log(err));
-        }
-    };
-
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.questionOneAnswer) {
-            API.saveAnswers({
-                questionFiveAnswer: this.state.questionFiveAnswer,
-                UID: this.state.questionFiveAnswer,
-                Email: this.state.questionFiveAnswer,
-                Industry: this.state.questionFiveAnswer,
-            })
-                .then(res => this.loadProfile())
-                .catch(err => console.log(err));
-        }
-    };
-
     //renders our forms
     render() {
         return (
-            <Form />
+            <Form handleFormSubmit = {this.handleFormSubmit}/>
         )
     }
 }
