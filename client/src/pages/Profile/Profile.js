@@ -15,7 +15,7 @@ class Profile extends Component {
 
     //waits for component to mount
     componentDidMount() {
-        this.loadProfile();
+        // this.loadProfile();
     }
 
     //function to load existing profile information
@@ -30,7 +30,9 @@ class Profile extends Component {
 
     //records data when questionOneAnswer button is pressed
     handleFormSubmit = event => {
-        event.preventDefault();
+        event.persist();
+        const eventData = event.target.value
+        console.log(eventData);
         if (this.state.questionOneAnswer) {
             API.saveAnswers({
                 questionResponse: event.target.questionOneAnswer,

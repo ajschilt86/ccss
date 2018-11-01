@@ -12,7 +12,7 @@ const Form = props => {
                 <option value='3'>Entrepreneurship</option>
             </Input>
         </Row>
-        {questionArray.map((question) => <QuestionRow questionText={question} />
+        {questionArray.map((question) => <QuestionRow handleFormSubmit = {props.handleFormSubmit} questionText={question} />
 
         )
         }
