@@ -8,9 +8,10 @@ import Home from "./pages/Home";
 const App = () => (
   <Router>
     <div className="App">
-      <Nav />
+      
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/profile" component={Profile} />
       </Switch>
     </div>
   </Router>
