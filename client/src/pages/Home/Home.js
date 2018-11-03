@@ -22,7 +22,7 @@ class Authentication extends Component {
                         </video>
                         <Row>
                             <Input s={6} label="Email" />
-                            <Input s={6} label="Password (Must be 6 characters or more)" />
+                            <Input s={6} type="password" name="password" label="Password (Must be 6 characters or more)" />
                             <Button waves='light' id="signUpButton">Sign up</Button>
                             <Button waves='light' id="signInButton">Sign in</Button>
                         </Row>
@@ -32,7 +32,7 @@ class Authentication extends Component {
                         <Row>
                             <Col s={6} className='grid-example'>
 
-                                <img src="images/market.jpg" alt="market" width="100%"/>
+                                <img src="images/market.jpg" alt="market" width="100%" />
 
                             </Col>
                             <Col s={6} className='grid-example'>
@@ -48,7 +48,7 @@ class Authentication extends Component {
                             </Col>
                             <Col s={6} className='grid-example'>
 
-                                <img src="images/all-hands.jpg" alt="market"  width="100%"/>
+                                <img src="images/all-hands.jpg" alt="market" width="100%" />
 
                             </Col>
                         </Row>
