@@ -12,8 +12,14 @@ const Form = props => {
                 <option value='3'>Entrepreneurship</option>
             </Input>
         </Row>
-        {questionArray.map((question) => <QuestionRow handleFormSubmit = {props.handleFormSubmit} questionText={question} />
-
+        {questionArray.map((question) =>
+            <QuestionRow
+                key={question + Math.random()}
+                handleFormSubmit={(e, inputName) =>
+                    this.handleFormSubmit(e, inputName)}
+                quesitonText={question}
+                inputName={question.split(' ').join('-')}
+            />
         )
         }
 

@@ -3,16 +3,21 @@ import { Row, Input, Button } from 'react-materialize';
 
 
 const QuestionRow = (props) => {
-    console.log(props)
-    return <form onSubmit={(event) =>  {
-        console.log("question row ", event);
-        props.handleFormSubmit(event)}}>
-        
-        <Row>
-            <Input s={12} label={props.questionText} id="questionOneAnswer" name="questionOneAnswer" />
-            <Button waves='light' id="questionOne" type="submit">save</Button>
-        </Row>
-    </form>
+    return <Row>
+        <form
+            onSubmit={e => {
+                props.handleFormSubmit(e, props.inputName)
+            }}>
+            <Input
+                s={12}
+                label={props.questionText}
+                name={props.inputName} />
+            <Button waves='light' type="submit">
+                Save
+                </Button>
+        </form>
+    </Row>
+
 }
 
 export default QuestionRow;
