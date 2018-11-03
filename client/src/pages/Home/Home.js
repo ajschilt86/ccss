@@ -30,7 +30,9 @@ class Authentication extends Component {
                     <div className="divider"></div>
                     <Row>
                         <Col s={6} className='grid-example'>
-                            <img src="/images/all-hands.jpg" alt="all hands" />
+
+                            <img src="images/market.jpg" alt="market" />
+
                         </Col>
                         <Col s={6} className='grid-example'>
                             <h1>In hand new connections</h1>
@@ -44,7 +46,9 @@ class Authentication extends Component {
                             <p>Answer 5 quick questions and then browse other people's answers. See what skills people in your area are offering. Post and find help wanted ads. Meet passionate people. Make new connections.</p>
                         </Col>
                         <Col s={6} className='grid-example'>
-                            <img src="./pages/Home/images/market.jpg" alt="market" />
+
+                            <img src="images/market.jpg" alt="market" />
+
                         </Col>
                     </Row>
                 </div>
