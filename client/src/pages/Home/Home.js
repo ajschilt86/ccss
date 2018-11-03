@@ -3,12 +3,17 @@ import { Navbar, NavItem, Row, Col, Input, Button } from 'react-materialize'
 
 
 class Authentication extends Component {
+    // add firebase here
+    // add firebase here
+    // add firebase here
+       
+    
     render() {
         return (
             <div>
                 <Navbar brand='Chicago Community Skill Share' right>
-                    <NavItem onClick={() => console.log('test click')}>Sign in</NavItem>
-                    <NavItem href='components.html'>Sign up</NavItem>
+                    <NavItem href='#signInButton'>Sign in</NavItem>
+                    <NavItem href='#signUpButton'>Sign up</NavItem>
                 </Navbar>
                 <div className="container">
                     <div className="hero">
@@ -18,14 +23,16 @@ class Authentication extends Component {
                         <Row>
                             <Input s={6} label="Email" />
                             <Input s={6} label="Password (Must be 6 characters or more)" />
-                            <Button waves='light'>Sign up</Button>
-                            <Button waves='light'>Sign in</Button>
+                            <Button waves='light' id="signUpButton">Sign up</Button>
+                            <Button waves='light' id="signInButton">Sign in</Button>
                         </Row>
                     </div>
                     <div className="divider"></div>
                     <Row>
                         <Col s={6} className='grid-example'>
+
                             <img src="images/market.jpg" alt="market" />
+
                         </Col>
                         <Col s={6} className='grid-example'>
                             <h1>In hand new connections</h1>
@@ -36,10 +43,12 @@ class Authentication extends Component {
                     <Row>
                         <Col s={6} className='grid-example'>
                             <h1>Online Speed Networking</h1>
-                            <p>Answer 5 quick questions and then browse other people's answers. See what skills people in your area are offering. Post help wanted ads. Meet passionate people.</p>
+                            <p>Answer 5 quick questions and then browse other people's answers. See what skills people in your area are offering. Post and find help wanted ads. Meet passionate people. Make new connections.</p>
                         </Col>
                         <Col s={6} className='grid-example'>
+
                             <img src="images/market.jpg" alt="market" />
+
                         </Col>
                     </Row>
                 </div>

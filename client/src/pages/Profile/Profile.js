@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Form from "../../components/Form";
 import API from "../../utils/API";
+import Nav from "../../components/Nav";
 
 class Profile extends Component {
 
     //these are the dynamic elements on the profile page    
     state = {
-        
+
     };
 
     handleAnswerUpdate = () => {
@@ -48,7 +49,10 @@ class Profile extends Component {
     //renders our forms
     render() {
         return (
-            <Form handleFormSubmit = {this.handleFormSubmit}/>
+            <div>
+                <Nav />
+                <Form handleFormSubmit={this.handleFormSubmit} />
+            </div>
         )
     }
 }
