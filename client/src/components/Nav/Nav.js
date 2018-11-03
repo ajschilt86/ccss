@@ -3,7 +3,7 @@ import { SideNav, SideNavItem, Button } from 'react-materialize'
 
 export default () => (
     <SideNav
-        trigger={<Button>SIDE NAV DEMO</Button>}
+        trigger={<Button>Side Nav</Button>}
         options={{ closeOnClick: true }}
     >
         <SideNavItem userView
