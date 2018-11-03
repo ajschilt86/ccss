@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
 
+
 const App = () => (
   <Router>
     <div className="App">
