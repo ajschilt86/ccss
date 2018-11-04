@@ -11,7 +11,7 @@ class Profile extends Component {
 
     //these are the dynamic elements on the profile page    
     state = {
-        questionResponse: "",
+        pitch: "",
         skills: "",
         passions: "",
         values: "",
@@ -48,16 +48,76 @@ class Profile extends Component {
 
 
     //records data when questionOneAnswer button is pressed
-    handleFormSubmit = event => {
+    handleFormSubmitPitch = event => {
         event.preventDefault();
         const eventData = event.target.value
         console.log(eventData);
         if (this.state.questionOneAnswer) {
             API.saveAnswers({
-                questionResponse: this.state.questionResponse,
+                pitch: this.state.pitch,
+                UID: this.state.questionOneAnswer,
+                Email: this.state.questionOneAnswer,
+                Industry: this.state.questionOneAnswer,
+            })
+                .then(res => this.loadProfile())
+                .catch(err => console.log(err));
+        }
+    };
+
+    handleFormSubmitSkills = event => {
+        event.preventDefault();
+        const eventData = event.target.value
+        console.log(eventData);
+        if (this.state.questionOneAnswer) {
+            API.saveAnswers({
                 skills: this.state.skills,
-                passions: this.state.passions,
+                UID: this.state.questionOneAnswer,
+                Email: this.state.questionOneAnswer,
+                Industry: this.state.questionOneAnswer,
+            })
+                .then(res => this.loadProfile())
+                .catch(err => console.log(err));
+        }
+    };
+
+    handleFormSubmitPassions = event => {
+        event.preventDefault();
+        const eventData = event.target.value
+        console.log(eventData);
+        if (this.state.questionOneAnswer) {
+            API.saveAnswers({
+                passions: this.state.passions,                
+                UID: this.state.questionOneAnswer,
+                Email: this.state.questionOneAnswer,
+                Industry: this.state.questionOneAnswer,
+            })
+                .then(res => this.loadProfile())
+                .catch(err => console.log(err));
+        }
+    };
+
+    handleFormSubmitValues = event => {
+        event.preventDefault();
+        const eventData = event.target.value
+        console.log(eventData);
+        if (this.state.questionOneAnswer) {
+            API.saveAnswers({
                 values: this.state.values,
+                UID: this.state.questionOneAnswer,
+                Email: this.state.questionOneAnswer,
+                Industry: this.state.questionOneAnswer,
+            })
+                .then(res => this.loadProfile())
+                .catch(err => console.log(err));
+        }
+    };
+
+    handleFormSubmitHelp = event => {
+        event.preventDefault();
+        const eventData = event.target.value
+        console.log(eventData);
+        if (this.state.questionOneAnswer) {
+            API.saveAnswers({
                 help: this.state.help,
                 UID: this.state.questionOneAnswer,
                 Email: this.state.questionOneAnswer,
@@ -68,12 +128,6 @@ class Profile extends Component {
         }
     };
 
-    // handleFormSubmit = (e, inputName) => {
-    //     const inputField = e.target[inputName];
-    //     console.log(inputField.name, inputField.value)
-    //     e.preventDefault();
-    // }
-
     //renders our forms
     render() {
         return (
@@ -83,16 +137,23 @@ class Profile extends Component {
 
                 <form>
                     <Row>
+            <           Input s={12} type='select' label="Industry" defaultValue='2'>
+                            <option value='1'>Music</option>
+                            <option value='2'>Art</option>
+                            <option value='3'>Entrepreneurship</option>
+                        </Input>
+                    </Row>
+                    <Row>
                         <Input
                             s={12}
-                            value={this.state.questionResponse}
+                            value={this.state.pitch}
                             onChange={this.handleInputChange}
-                            name="questionResponse"
+                            name="pitch"
                             label="30 Second Pitch"
                             placeholder="Describe yourself"
                         />
                         <Button
-                            disabled={!this.state.questionResponse}>
+                            disabled={!this.state.pitch} onClick={this.handleFormSubmitPitch}>
                             Save
                             </Button>
                     </Row>
@@ -106,7 +167,7 @@ class Profile extends Component {
                             placeholder="My skills include..."
                         />
                         <Button
-                            disabled={!this.state.skills}>
+                            disabled={!this.state.skills} onClick={this.handleFormSubmitSkills}>
                             Save
                         </Button>
                     </Row>
@@ -120,7 +181,7 @@ class Profile extends Component {
                             placeholder="My passions are..."
                         />
                         <Button
-                            disabled={!this.state.passions}>
+                            disabled={!this.state.passions} onClick={this.handleFormSubmitPassions}>
                             Save
                             </Button>
                     </Row>
@@ -133,7 +194,7 @@ class Profile extends Component {
                             label="My values are..."
                         />
                         <Button
-                            disable={!this.state.values}>
+                            disabled={!this.state.values} onClick={this.handleFormSubmitValues}>
                             Save
                         </Button>
                     </Row>
@@ -146,7 +207,7 @@ class Profile extends Component {
                             label="I am looking for..."
                         />
                         <Button
-                            disabled={!this.state.help}>
+                            disabled={!this.state.help} onClick={this.handleFormSubmitHelp}>
                             Save
                         </Button>
                     </Row>
