@@ -7,6 +7,7 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
+    "@blueprintjs/core": "^3.8.0",
     "axios": "^0.18.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.1.0",
