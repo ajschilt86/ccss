@@ -92,8 +92,9 @@ class Profile extends Component {
                             placeholder="Describe yourself"
                         />
                         <Button
-                            disabled={!this.state.questionResponse}
-                        >Save</Button>
+                            disabled={!this.state.questionResponse}>
+                            Save
+                            </Button>
                     </Row>
                     <Row>
                         <Input
@@ -104,7 +105,10 @@ class Profile extends Component {
                             label="My Skills"
                             placeholder="My skills include..."
                         />
-                        <Button>Save</Button>
+                        <Button
+                            disabled={!this.state.skills}>
+                            Save
+                        </Button>
                     </Row>
                     <Row>
                         <Input
@@ -115,7 +119,10 @@ class Profile extends Component {
                             label="My Passions"
                             placeholder="My passions are..."
                         />
-                        <Button>Save</Button>
+                        <Button
+                            disabled={!this.state.passions}>
+                            Save
+                            </Button>
                     </Row>
                     <Row>
                         <Input
@@ -125,7 +132,10 @@ class Profile extends Component {
                             name="values"
                             label="My values are..."
                         />
-                        <Button>Save</Button>
+                        <Button
+                            disable={!this.state.values}>
+                            Save
+                        </Button>
                     </Row>
                     <Row>
                         <Input
@@ -135,7 +145,10 @@ class Profile extends Component {
                             name="help"
                             label="I am looking for..."
                         />
-                        <Button>Save</Button>
+                        <Button
+                            disabled={!this.state.help}>
+                            Save
+                        </Button>
                     </Row>
                 </form>
             </div >
