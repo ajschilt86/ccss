@@ -19,30 +19,11 @@ class Header extends Component {
   render() {
     return (
       <nav className="pt-navbar">
-        <div className="pt-navbar-group pt-align-left">
-          <div className="pt-navbar-heading">Chord Creator</div>
-          {this.props.authenticated
-              ? <input className="pt-input" placeholder="Search Songs..." type="text" />
-              : null
-          }
-        </div>
         {
           this.props.authenticated
           ? (
             <div className="pt-navbar-group pt-align-right">
-              <Link className="pt-button pt-minimal pt-icon-music" to="/songs">Songs</Link>
-              <Popover
-                content={(<NewSongForm addSong={this.props.addSong} postSubmitHandler={this.closePopover} />)}
-                interactionKind={PopoverInteractionKind.CLICK}
-                isOpen={this.state.popoverOpen}
-                onInteraction={(state) => this.setState({ popoverOpen: state })}
-                position={Position.BOTTOM}>
-                <button className="pt-button pt-minimal pt-icon-add" aria-label="add new song"></button>
-              </Popover>
-              <span className="pt-navbar-divider"></span>
-              <button className="pt-button pt-minimal pt-icon-user"></button>
-              <button className="pt-button pt-minimal pt-icon-cog"></button>
-              <Link className="pt-button pt-minimal pt-icon-log-out" to="/logout" aria-label="Log Out"></Link>
+              <Link className="pt-button pt-minimal pt-icon-log-out" to="/logout" aria-label="Log Out">Logout</Link>
             </div>
           )
             : (
