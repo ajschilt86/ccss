@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Form from "../../components/Form";
+// import Form from "../../components/Form";
 import API from "../../utils/API";
 import Nav from "../../components/Nav";
 import { Input, Row, Button } from "react-materialize";
-import QuestionRow from "../../components/Form/QuestionRow";
+// import QuestionRow from "../../components/Form/QuestionRow";
 
 class Profile extends Component {
     questions = ["30 Second Pitch", "My Skills", "My Passions", "My Values", "Help Wanted"];

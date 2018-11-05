@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Navbar, NavItem, Row, Col, Input, Button } from "react-materialize";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
-import { Spinner } from "@blueprintjs/core";
+// import { Spinner } from "@blueprintjs/core";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Login from "../../components/Login";
