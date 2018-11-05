@@ -17,7 +17,7 @@ class Profile extends Component {
         values: "",
         help: "",
         UID: "",
-        Email: "",
+        email: "",
         Industry: ""
     };
 
@@ -41,7 +41,7 @@ class Profile extends Component {
     loadProfile = () => {
         API.getAnswersByUID()
             .then(res =>
-                this.setState({ Answers: res.data, title: "", author: "", synopsis: "" })
+                this.setState({ Answers: res.data, pitch: "" })
             )
             .catch(err => console.log(err));
     };
@@ -50,80 +50,71 @@ class Profile extends Component {
     //records data when questionOneAnswer button is pressed
     handleFormSubmitPitch = event => {
         event.preventDefault();
-        const eventData = event.target.value
-        console.log(eventData);
-        if (this.state.questionOneAnswer) {
+        console.log(event);
+        if (this.state.pitch) {
             API.saveAnswers({
                 pitch: this.state.pitch,
                 UID: this.state.questionOneAnswer,
-                Email: this.state.questionOneAnswer,
+                email: this.state.email,
                 Industry: this.state.questionOneAnswer,
             })
-                .then(res => this.loadProfile())
+                // .then(res => this.loadProfile())
                 .catch(err => console.log(err));
         }
     };
 
     handleFormSubmitSkills = event => {
         event.preventDefault();
-        const eventData = event.target.value
-        console.log(eventData);
-        if (this.state.questionOneAnswer) {
+        console.log(event);
+        if (this.state.skills) {
             API.saveAnswers({
                 skills: this.state.skills,
                 UID: this.state.questionOneAnswer,
-                Email: this.state.questionOneAnswer,
+                email: this.state.email,
                 Industry: this.state.questionOneAnswer,
             })
-                .then(res => this.loadProfile())
                 .catch(err => console.log(err));
         }
     };
 
     handleFormSubmitPassions = event => {
         event.preventDefault();
-        const eventData = event.target.value
-        console.log(eventData);
-        if (this.state.questionOneAnswer) {
+        console.log(event);
+        if (this.state.passions) {
             API.saveAnswers({
-                passions: this.state.passions,                
+                passions: this.state.passions,
                 UID: this.state.questionOneAnswer,
-                Email: this.state.questionOneAnswer,
+                email: this.state.email,
                 Industry: this.state.questionOneAnswer,
             })
-                .then(res => this.loadProfile())
                 .catch(err => console.log(err));
         }
     };
 
     handleFormSubmitValues = event => {
         event.preventDefault();
-        const eventData = event.target.value
-        console.log(eventData);
-        if (this.state.questionOneAnswer) {
+        console.log(event);
+        if (this.state.values) {
             API.saveAnswers({
                 values: this.state.values,
                 UID: this.state.questionOneAnswer,
-                Email: this.state.questionOneAnswer,
+                email: this.state.questionOneAnswer,
                 Industry: this.state.questionOneAnswer,
             })
-                .then(res => this.loadProfile())
                 .catch(err => console.log(err));
         }
     };
 
     handleFormSubmitHelp = event => {
         event.preventDefault();
-        const eventData = event.target.value
-        console.log(eventData);
-        if (this.state.questionOneAnswer) {
+        console.log(event);
+        if (this.state.help) {
             API.saveAnswers({
                 help: this.state.help,
                 UID: this.state.questionOneAnswer,
-                Email: this.state.questionOneAnswer,
+                email: this.state.email,
                 Industry: this.state.questionOneAnswer,
             })
-                .then(res => this.loadProfile())
                 .catch(err => console.log(err));
         }
     };
@@ -137,11 +128,21 @@ class Profile extends Component {
 
                 <form>
                     <Row>
-            <           Input s={12} type='select' label="Industry" defaultValue='2'>
+                        <Input s={12} type='select' label="Industry" defaultValue='2'>
                             <option value='1'>Music</option>
                             <option value='2'>Art</option>
                             <option value='3'>Entrepreneurship</option>
                         </Input>
+                    </Row>
+                    <Row>
+                        <Input
+                            s={12}
+                            value={this.state.email}
+                            onChange={this.handleInputChange}
+                            name="email"
+                            label="E-Mail"
+                            placeholder="name@domain.com"
+                        />
                     </Row>
                     <Row>
                         <Input
