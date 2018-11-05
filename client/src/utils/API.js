@@ -1,16 +1,18 @@
 import axios from "axios";
 
 export default {
-    getAnswersByUID: function(id) {
+    getAnswersByUID: function (id) {
         return axios.get("/api/users/" + id)
     },
-    getAnswersByQuest: function(id) {
+    getAnswersByQuest: function (id) {
         return axios.get("api/questions/" + id)
     },
-    saveAnswers: function(userAnswer) {
+    saveAnswers: function (userAnswer) {
         return axios.post("/api/answers", userAnswer)
-    },    
-    updateAnswer: function(id) {
+            .then(console.log(userAnswer))
+            .catch(err => { console.log(err) })
+    },
+    updateAnswer: function (id) {
         return axios.post("api/answers/" + id)
     }
 }
