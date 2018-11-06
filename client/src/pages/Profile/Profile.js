@@ -18,7 +18,7 @@ class Profile extends Component {
         help: "",
         UID: "",
         email: "",
-        Industry: ""
+        industry: ""
     };
 
     handleAnswerUpdate = () => {
@@ -56,7 +56,7 @@ class Profile extends Component {
                 pitch: this.state.pitch,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
-                Industry: this.state.questionOneAnswer,
+                industry: this.state.industry,
             })
                 // .then(res => this.loadProfile())
                 .catch(err => console.log(err));
@@ -71,7 +71,7 @@ class Profile extends Component {
                 skills: this.state.skills,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
-                Industry: this.state.questionOneAnswer,
+                industry: this.state.industry,
             })
                 .catch(err => console.log(err));
         }
@@ -85,7 +85,7 @@ class Profile extends Component {
                 passions: this.state.passions,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
-                Industry: this.state.questionOneAnswer,
+                industry: this.state.industry,
             })
                 .catch(err => console.log(err));
         }
@@ -99,7 +99,7 @@ class Profile extends Component {
                 values: this.state.values,
                 UID: this.state.questionOneAnswer,
                 email: this.state.questionOneAnswer,
-                Industry: this.state.questionOneAnswer,
+                industry: this.state.industry,
             })
                 .catch(err => console.log(err));
         }
@@ -113,7 +113,7 @@ class Profile extends Component {
                 help: this.state.help,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
-                Industry: this.state.questionOneAnswer,
+                industry: this.state.industry,
             })
                 .catch(err => console.log(err));
         }
@@ -128,10 +128,16 @@ class Profile extends Component {
 
                 <form>
                     <Row>
-                        <Input s={12} type='select' label="Industry" defaultValue='2'>
-                            <option value='1'>Music</option>
-                            <option value='2'>Art</option>
-                            <option value='3'>Entrepreneurship</option>
+                        <Input
+                            s={12}
+                            type='select'
+                            name="industry"
+                            onChange={this.handleInputChange}
+                            label="Industry"
+                            defaultValue='2'>
+                            <option value='Music'>Music</option>
+                            <option value='Art'>Art</option>
+                            <option value='Entrepreneurship'>Entrepreneurship</option>
                         </Input>
                     </Row>
                     <Row>
