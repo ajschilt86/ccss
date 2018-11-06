@@ -21,10 +21,15 @@ class AnswerFeed extends Component {
     };
 
     loadAnswers = () => {
-        API.getAnswersByQuest()
+        API.getAnswersByQuest("pitch")
             .then(res =>
                 this.setState({ answers: res.data, answer: "", email: "", industry: "" })
+            ).then (res =>
+                this.state.answers.push({answers: res.data}),
+                console.log(this.state.answers),
                 
+            ).then (res =>
+                console.log("test: " + res.data)
             )
             .catch(err => console.log(err));
     };
