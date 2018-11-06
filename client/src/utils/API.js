@@ -5,7 +5,7 @@ export default {
         return axios.get("/api/users/" + id)
     },
     getAnswersByQuest: function (id) {
-        return axios.get("api/questions/" + id)
+        return axios.get("api/users/questions/" + id)
     },
     saveAnswers: function (userAnswer) {
         return axios.post("api/users/answers", userAnswer)
