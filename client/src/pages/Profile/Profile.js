@@ -50,7 +50,7 @@ class Profile extends Component {
         console.log(event);
         if (this.state.pitch) {
             API.saveAnswers({
-                pitch: this.state.pitch,
+                answer: this.state.pitch,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
@@ -64,7 +64,7 @@ class Profile extends Component {
         console.log(event);
         if (this.state.skills) {
             API.saveAnswers({
-                skills: this.state.skills,
+                answer: this.state.skills,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
@@ -78,7 +78,7 @@ class Profile extends Component {
         console.log(event);
         if (this.state.passions) {
             API.saveAnswers({
-                passions: this.state.passions,
+                answer: this.state.passions,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
@@ -92,9 +92,9 @@ class Profile extends Component {
         console.log(event);
         if (this.state.values) {
             API.saveAnswers({
-                values: this.state.values,
+                answer: this.state.values,
                 UID: this.state.questionOneAnswer,
-                email: this.state.questionOneAnswer,
+                email: this.state.email,
                 industry: this.state.industry,
             })
                 .catch(err => console.log(err));
@@ -106,7 +106,7 @@ class Profile extends Component {
         console.log(event);
         if (this.state.help) {
             API.saveAnswers({
-                help: this.state.help,
+                answer: this.state.help,
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
