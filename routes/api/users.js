@@ -2,8 +2,7 @@ const router = require("express").Router();
 const userController = require("../../controllers/usersController");
 
 router
-    .route("/profile")
-    .get(userController.findByQuest)
+    .route("/answers")
     .post(userController.create)
 router
     .route("users/:id")

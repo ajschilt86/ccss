@@ -6,9 +6,6 @@ import { Input, Row, Button } from "react-materialize";
 // import QuestionRow from "../../components/Form/QuestionRow";
 
 class Profile extends Component {
-    questions = ["30 Second Pitch", "My Skills", "My Passions", "My Values", "Help Wanted"];
-
-
     //these are the dynamic elements on the profile page    
     state = {
         pitch: "",
@@ -58,7 +55,6 @@ class Profile extends Component {
                 email: this.state.email,
                 industry: this.state.industry,
             })
-                // .then(res => this.loadProfile())
                 .catch(err => console.log(err));
         }
     };
@@ -124,8 +120,6 @@ class Profile extends Component {
         return (
             <div>
                 <Nav />
-                {/* <Form handleFormSubmit={this.handleFormSubmit} /> */}
-
                 <form>
                     <Row>
                         <Input
