@@ -12,16 +12,16 @@ var answersSchema = new Schema({
   // headline, a string, must be entered
   question: {
     type: String,
-    required: true
+    required: false
   },
   answer: {
     type: String,
-    required: true
+    required: false
   },
   // summary, a string, must be entered
   UID: {
     type: String,
-    required: true
+    required: false
   },
   // url, a string, must be entered
   industry: {
@@ -31,13 +31,13 @@ var answersSchema = new Schema({
   // date is just a string  
   email: {
     type: String,
-    default: Date.now
+    required: true
   },
   date: {
     type: Date,
     default: Date.now
   }
-  
+
 });
 
 // Create the Headline model using the headlineSchema
