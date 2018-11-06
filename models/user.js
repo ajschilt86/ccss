@@ -16,7 +16,7 @@ var answersSchema = new Schema({
   },
   answer: {
     type: String,
-    required: false
+    required: true
   },
   // summary, a string, must be entered
   UID: {
