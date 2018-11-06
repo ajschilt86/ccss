@@ -8,9 +8,9 @@ export default {
         return axios.get("api/questions/" + id)
     },
     saveAnswers: function (userAnswer) {
-        return axios.post("/api/answers", userAnswer)
+        return axios.post("api/users/answers", userAnswer)
             .then(console.log(userAnswer))
-            .catch(err => { console.log(err) })
+            .catch(err => console.log(err))
     },
     updateAnswer: function (id) {
         return axios.post("api/answers/" + id)
