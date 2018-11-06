@@ -54,6 +54,7 @@ class Profile extends Component {
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
+                question: document.getElementById("pitch").name,
             })
                 .catch(err => console.log(err));
         }
@@ -68,6 +69,7 @@ class Profile extends Component {
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
+                question: document.getElementById("skills").name,
             })
                 .catch(err => console.log(err));
         }
@@ -82,6 +84,7 @@ class Profile extends Component {
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
+                question: document.getElementById("passions").name,
             })
                 .catch(err => console.log(err));
         }
@@ -96,6 +99,7 @@ class Profile extends Component {
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
+                question: document.getElementById("values").name,
             })
                 .catch(err => console.log(err));
         }
@@ -110,6 +114,7 @@ class Profile extends Component {
                 UID: this.state.questionOneAnswer,
                 email: this.state.email,
                 industry: this.state.industry,
+                question: document.getElementById("help").name,
             })
                 .catch(err => console.log(err));
         }
@@ -129,6 +134,7 @@ class Profile extends Component {
                             onChange={this.handleInputChange}
                             label="Industry"
                             defaultValue='2'>
+                            <option value='Default'>Choose Industry</option>
                             <option value='Music'>Music</option>
                             <option value='Art'>Art</option>
                             <option value='Entrepreneurship'>Entrepreneurship</option>
@@ -147,6 +153,7 @@ class Profile extends Component {
                     <Row>
                         <Input
                             s={12}
+                            id="pitch"
                             value={this.state.pitch}
                             onChange={this.handleInputChange}
                             name="pitch"
@@ -161,6 +168,7 @@ class Profile extends Component {
                     <Row>
                         <Input
                             s={12}
+                            id="skills"
                             value={this.state.skills}
                             onChange={this.handleInputChange}
                             name="skills"
@@ -175,6 +183,7 @@ class Profile extends Component {
                     <Row>
                         <Input
                             s={12}
+                            id="passions"
                             value={this.state.passions}
                             onChange={this.handleInputChange}
                             name="passions"
@@ -189,6 +198,7 @@ class Profile extends Component {
                     <Row>
                         <Input
                             s={12}
+                            id="values"
                             value={this.state.values}
                             onChange={this.handleInputChange}
                             name="values"
@@ -202,6 +212,7 @@ class Profile extends Component {
                     <Row>
                         <Input
                             s={12}
+                            id="help"
                             value={this.state.help}
                             onChange={this.handleInputChange}
                             name="help"
