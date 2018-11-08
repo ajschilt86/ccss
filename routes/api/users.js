@@ -10,7 +10,12 @@ router
     .route("/answers/all")
     .get(userController.findAll)
 
-// Sends all the answers THROUGH POSTMAN
+//this route will be for each profile     
+router
+    .route("/answers/all/:UID")
+    .get(userController.findByUID)    
+
+// Sends all the answers based on question THROUGH POSTMAN
 router
     .route("/answers/:id")
     .get(userController.findByQuest)
