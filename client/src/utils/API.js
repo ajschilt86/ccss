@@ -4,8 +4,13 @@ export default {
     getAnswersByUID: function (id) {
         return axios.get("/api/users/" + id)
     },
-    getAnswersByQuest: function (id) {
-        return axios.get("api/users/questions/" + id)
+    getAll: function(){
+        return axios.get("/all", function(){
+            console.log('HItting get route');
+        })
+    },
+    getAnswersByQuest: function (userAnswer) {
+        return axios.get("api/users/answers", userAnswer)
     },
     saveAnswers: function (userAnswer) {
         return axios.post("api/users/answers", userAnswer)

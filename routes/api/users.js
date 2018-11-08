@@ -4,10 +4,18 @@ const userController = require("../../controllers/usersController");
 router
     .route("/answers")
     .post(userController.create)
+
+// Sends all the answers THROUGH POSTMAN
 router
-    .route("users/:id")
-    .get(userController.findByUID)
-    .post(userController.create)
-    .put(userController.update)
+    .route("/answers/all")
+    .get(userController.findAll)
+
+// Sends all the answers THROUGH POSTMAN
+router
+    .route("/answers/:id")
+    .get(userController.findByQuest)
+// .post(userController.create)
+// .put(userController.update)
+
 
 module.exports = router;
