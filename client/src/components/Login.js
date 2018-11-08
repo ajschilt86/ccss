@@ -76,8 +76,8 @@ class Login extends Component {
     return (
       <div style={loginStyles}>
         <Toaster ref={(element) => { this.toaster = element }} />
-        <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
-        <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
+        {/* <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button> */}
+        {/* <hr style={{marginTop: "10px", marginBottom: "10px"}}/> */}
         <form onSubmit={(event) => { this.authWithEmailPassword(event) }} ref={(form) => { this.loginForm = form }}>
           <div style={{marginBottom: "10px"}} className="pt-callout pt-icon-info-sign">
             <h5>Note</h5>
