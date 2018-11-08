@@ -12,7 +12,7 @@ var answersSchema = new Schema({
   // headline, a string, must be entered
   question: {
     type: String,
-    required: false
+    required: true
   },
   answer: {
     type: String,
