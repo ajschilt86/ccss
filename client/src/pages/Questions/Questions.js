@@ -3,6 +3,7 @@ import { Row, Input, Button } from 'react-materialize';
 import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Link } from "react-router-dom";
+import Cards from "../../components/Card";
 
 
 
@@ -37,23 +38,17 @@ class AnswerFeed extends Component {
     render() {
         return (
             <div>
-            {
-                this.state.answers.length ? (
+          
                     <List>
                         {this.state.answers.map(answers => (
                             <ListItem key={this.state._id}>
-                                <Link to={"/answers/" + this.state._id}>
-                                    <strong>
-                                        {this.state.answer} by {this.state.email} in {this.state.industry}
-                                    </strong>
-                                </Link>
+                                <Cards>                                    
+                                    
+                                </Cards>
                             </ListItem>
                         ))}
                     </List>
-                ) : (
-                        <h3>Try again!</h3>
-                    )
-            }
+            
             </div>
         )
     }
