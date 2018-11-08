@@ -12,7 +12,7 @@ import Cards from "../../components/Card";
 class AnswerFeed extends Component {
 
     state = {
-        answers: [],
+        answers: ["test1", "test2"],
         email: "",
         industry: ""
     };
@@ -23,29 +23,25 @@ class AnswerFeed extends Component {
 
     loadAnswers = () => {
         API.getAnswersByQuest("pitch")
-            .then(res =>
-                this.setState({ answers: res.data, answer: "", email: "", industry: "" })
-            ).then (res =>
-                this.state.answers.push({answers: res.data}),
-                console.log(this.state.answers),
-                
-            ).then (res =>
-                console.log("test: " + res.data)
+            .then (res =>
+                this.state.answers.push(res.data),
+                console.log(this.state.answers)
             )
-            .catch(err => console.log(err));
+            .catch(err => 
+                console.log(err)
+            );
+            
     };
 
     render() {
         return (
             <div>
-          
+                <h1>Share your 30 second pitch!</h1>
                     <List>
                         {this.state.answers.map(answers => (
-                            <ListItem key={this.state._id}>
-                                <Cards>                                    
-                                    
-                                </Cards>
-                            </ListItem>
+                            
+                            <h1>{answers}</h1>
+                            
                         ))}
                     </List>
             
