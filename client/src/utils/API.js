@@ -6,11 +6,11 @@ export default {
     },
     getAll: function(){
         return axios.get("/all", function(){
-            console.log('HItting get route');
+            console.log('Hitting get route');
         })
     },
     getAnswersByQuest: function (userAnswer) {
-        return axios.get("api/users/answers", userAnswer)
+        return axios.get("api/users/answers/" + userAnswer)
     },
     saveAnswers: function (userAnswer) {
         return axios.post("api/users/answers", userAnswer)
