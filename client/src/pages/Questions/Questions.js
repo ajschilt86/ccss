@@ -50,18 +50,26 @@ class AnswerFeed extends Component {
 
 
 
-render() {
-    return (
-        <div>
-            <h1>Share your 30 second pitch!</h1>
-            <List>
-                {this.state.answers.map((answer) => 
-                    <h1>{answer.answer}</h1>
-                )}
-            </List>
-        </div>
-    )
-}
+    render() {
+        return (
+            <div>
+                <h1>Share your 30 second pitch!</h1>
+
+                <List>
+                    {this.state.answers.map((answer) =>
+                        <Cards>
+                            <ListItem key={answer._id}>
+                                <h2>{answer.answer}</h2>
+                                <h4>by {answer.email}</h4>
+                                <h4>Industry: {answer.industry}</h4>
+                            </ListItem>
+                        </Cards>
+                    )}
+                </List>
+
+            </div>
+        )
+    }
 }
 
 

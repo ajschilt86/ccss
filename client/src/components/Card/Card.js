@@ -8,9 +8,8 @@ const Cards = props => {
         className=""
         textClassName="black-text"
         title="Card title"
-        actions={[<a href="#">{this.answers.email}</a>]}
       >
-        {this.answers.answer}
+        {props.children}
       </Card>
     </Col>
   );
