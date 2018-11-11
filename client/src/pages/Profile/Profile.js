@@ -135,8 +135,7 @@ class Profile extends Component {
                                 name="industry"
                                 onChange={this.handleInputChange}
                                 label="Industry"
-                                defaultValue='2'
-                                value="Choose Industry">
+                                defaultValue='2'>
                                 <option value='All'>All Industries</option>
                                 <option value='Music'>Music</option>
                                 <option value='Art'>Art</option>

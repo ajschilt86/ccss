@@ -16,7 +16,7 @@ export default () => (
         />
         <SideNavItem href='/profile'>My Profile</SideNavItem>
         <SideNavItem divider />
-        <SideNavItem href='#!second'>30 Second Pitch</SideNavItem>
+        <SideNavItem href='/questions'>30 Second Pitch</SideNavItem>
         <SideNavItem href='#!second'>My Skills</SideNavItem>
         <SideNavItem href='#!second'>My Passions</SideNavItem>
         <SideNavItem href='#!second'>My Values</SideNavItem>
