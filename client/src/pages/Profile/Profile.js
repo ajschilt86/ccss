@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-// import Form from "../../components/Form";
 import API from "../../utils/API";
 import Nav from "../../components/Nav";
 import { Input, Row, Button } from "react-materialize";
-// import QuestionRow from "../../components/Form/QuestionRow";
 
 class Profile extends Component {
     //these are the dynamic elements on the profile page    
