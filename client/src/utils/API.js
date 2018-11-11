@@ -12,6 +12,11 @@ export default {
     getAnswersByQuest: function (userAnswer) {
         return axios.get("api/users/answers/" + userAnswer)
     },
+
+    //added getAnswersByIndustry to filter answers by industry
+    getAnswersByIndustry: function (userAnswer) {
+        return axios.get("api/users/industry/" + userAnswer)
+    },
     saveAnswers: function (userAnswer) {
         return axios.post("api/users/answers", userAnswer)
             .then(console.log(userAnswer))

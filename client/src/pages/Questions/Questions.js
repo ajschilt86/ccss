@@ -4,13 +4,14 @@ import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Link } from "react-router-dom";
 import Cards from "../../components/Card";
-
+import "./Questions.css"
 
 
 
 
 class AnswerFeed extends Component {
     state = {
+        answersIndustry: [],
         answers: ["test1", "test2"],
         email: "",
         industry: ""
@@ -21,41 +22,49 @@ class AnswerFeed extends Component {
     }
 
     loadAnswers() {
-        API.getAnswersByQuest("pitch")
+        API.getAnswersByIndustry(this.state.industry)
             .then(res => {
                 this.setState({
-                    answers: res.data
+                    answersIndustry: res.data
                 })
+                console.log(this.state.answersIndustry)
+                    for(let i in this.state.answersIndustry) {
+                        if(this.state.answersIndustry[i].pitch === "pitch") {
+                            this.state.answers.push(this.state.answersIndustry)
+                        }
+                    }
+
+
+                // API.getAnswersByQuest("pitch")
+                //     .then(res => {
+                //         this.setState({
+                //             answers: res.data
+                //         })
+                //     })
             })
     }
-
-    // // this.loadAnswers();
-    // loadAnswers = () => {
-    //     API.getAnswersByQuest("pitch")
-    //         .then(function (res) { 
-    //             // const dat = res.data[0]
-    //             // this.state.answers.push(dat)
-    //             // this.state.answers.push(res.data)
-    //             console.log(this.state)
-    //             console.log(res)
-    //             // console.log(res.data)
-    //             // console.log(typeof(res.data))
-    //         })
-    //         .catch(err => 
-    //             console.log(err)
-    //         );
-
-    // };
-
-
-
 
     render() {
         return (
             <div>
                 <h1>Share your 30 second pitch!</h1>
 
-                <List>
+                <div className="container">
+                    <Row>
+                        <Input
+                            s={12}
+                            type='select'
+                            name="industry"
+                            onChange={this.handleInputChange}
+                            label="Industry"
+                            defaultValue='2'
+                            placeholder="Choose Industry">
+                            <option value='All'>All Industries</option>
+                            <option value='Music'>Music</option>
+                            <option value='Art'>Art</option>
+                            <option value='Entrepreneurship'>Entrepreneurship</option>
+                        </Input>
+                    </Row>
                     {this.state.answers.map((answer) =>
                         <Cards>
                             <ListItem key={answer._id}>
@@ -65,7 +74,7 @@ class AnswerFeed extends Component {
                             </ListItem>
                         </Cards>
                     )}
-                </List>
+                </div>
 
             </div>
         )

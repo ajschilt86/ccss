@@ -16,6 +16,14 @@ module.exports = {
             .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     },
+
+    // finds industry by key value pair and params.id
+    findByIndustry: (req, res) => {
+        db.Answers
+            .find({ industry: req.params.id })
+            .then(dbAnswers => res.json(dbAnswers))
+            .catch(err => res.status(422).json(err));
+    },
     findByUID: (req, res) => {
         db.Answers
             .findById({ UID: req.params.id })
