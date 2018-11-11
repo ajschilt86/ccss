@@ -124,106 +124,110 @@ class Profile extends Component {
     render() {
         return (
             <div>
-                <Nav />
-                <form>
-                    <Row>
-                        <Input
-                            s={12}
-                            type='select'
-                            name="industry"
-                            onChange={this.handleInputChange}
-                            label="Industry"
-                            defaultValue='2'>
-                            <option value='Default'>Choose Industry</option>
-                            <option value='Music'>Music</option>
-                            <option value='Art'>Art</option>
-                            <option value='Entrepreneurship'>Entrepreneurship</option>
-                        </Input>
-                    </Row>
-                    <Row>
-                        <Input
-                            s={12}
-                            value={this.state.email}
-                            onChange={this.handleInputChange}
-                            name="email"
-                            label="E-Mail"
-                            placeholder="name@domain.com"
-                        />
-                    </Row>
-                    <Row>
-                        <Input
-                            s={12}
-                            id="pitch"
-                            value={this.state.pitch}
-                            onChange={this.handleInputChange}
-                            name="pitch"
-                            label="30 Second Pitch"
-                            placeholder="Describe yourself"
-                        />
-                        <Button
-                            disabled={!this.state.pitch} onClick={this.handleFormSubmitPitch}>
-                            Save
+                <div className="container">
+                    <Nav />
+
+                    <form>
+                        <Row>
+                            <Input
+                                s={12}
+                                type='select'
+                                name="industry"
+                                onChange={this.handleInputChange}
+                                label="Industry"
+                                defaultValue='2'
+                                value="Choose Industry">
+                                <option value='All'>All Industries</option>
+                                <option value='Music'>Music</option>
+                                <option value='Art'>Art</option>
+                                <option value='Entrepreneurship'>Entrepreneurship</option>
+                            </Input>
+                        </Row>
+                        <Row>
+                            <Input
+                                s={12}
+                                value={this.state.email}
+                                onChange={this.handleInputChange}
+                                name="email"
+                                label="E-Mail"
+                                placeholder="name@domain.com"
+                            />
+                        </Row>
+                        <Row>
+                            <Input
+                                s={12}
+                                id="pitch"
+                                value={this.state.pitch}
+                                onChange={this.handleInputChange}
+                                name="pitch"
+                                label="30 Second Pitch"
+                                placeholder="Describe yourself"
+                            />
+                            <Button
+                                disabled={!this.state.pitch} onClick={this.handleFormSubmitPitch}>
+                                Save
                             </Button>
-                    </Row>
-                    <Row>
-                        <Input
-                            s={12}
-                            id="skills"
-                            value={this.state.skills}
-                            onChange={this.handleInputChange}
-                            name="skills"
-                            label="My Skills"
-                            placeholder="My skills include..."
-                        />
-                        <Button
-                            disabled={!this.state.skills} onClick={this.handleFormSubmitSkills}>
-                            Save
+                        </Row>
+                        <Row>
+                            <Input
+                                s={12}
+                                id="skills"
+                                value={this.state.skills}
+                                onChange={this.handleInputChange}
+                                name="skills"
+                                label="My Skills"
+                                placeholder="My skills include..."
+                            />
+                            <Button
+                                disabled={!this.state.skills} onClick={this.handleFormSubmitSkills}>
+                                Save
                         </Button>
-                    </Row>
-                    <Row>
-                        <Input
-                            s={12}
-                            id="passions"
-                            value={this.state.passions}
-                            onChange={this.handleInputChange}
-                            name="passions"
-                            label="My Passions"
-                            placeholder="My passions are..."
-                        />
-                        <Button
-                            disabled={!this.state.passions} onClick={this.handleFormSubmitPassions}>
-                            Save
+                        </Row>
+                        <Row>
+                            <Input
+                                s={12}
+                                id="passions"
+                                value={this.state.passions}
+                                onChange={this.handleInputChange}
+                                name="passions"
+                                label="My Passions"
+                                placeholder="My passions are..."
+                            />
+                            <Button
+                                disabled={!this.state.passions} onClick={this.handleFormSubmitPassions}>
+                                Save
                             </Button>
-                    </Row>
-                    <Row>
-                        <Input
-                            s={12}
-                            id="values"
-                            value={this.state.values}
-                            onChange={this.handleInputChange}
-                            name="values"
-                            label="My values are..."
-                        />
-                        <Button
-                            disabled={!this.state.values} onClick={this.handleFormSubmitValues}>
-                            Save
+                        </Row>
+                        <Row>
+                            <Input
+                                s={12}
+                                id="values"
+                                value={this.state.values}
+                                onChange={this.handleInputChange}
+                                name="values"
+                                label="My values are..."
+                            />
+                            <Button
+                                disabled={!this.state.values} onClick={this.handleFormSubmitValues}>
+                                Save
                         </Button>
-                    </Row>
-                    <Row>
-                        <Input
-                            s={12}
-                            id="help"
-                            value={this.state.help}
-                            onChange={this.handleInputChange}
-                            name="help"
-                            label="I am looking for..."
-                        />
-                        <Button
-                            disabled={!this.state.help} onClick={this.handleFormSubmitHelp}>
-                            Save
+                        </Row>
+                        <Row>
+                            <Input
+                                s={12}
+                                id="help"
+                                value={this.state.help}
+                                onChange={this.handleInputChange}
+                                name="help"
+                                label="I am looking for..."
+                            />
+                            <Button
+                                disabled={!this.state.help} onClick={this.handleFormSubmitHelp}>
+                                Save
                         </Button>
-                    </Row>
-                </form>
+                        </Row>
+                    </form>
+                </div>
             </div >
         )
     }

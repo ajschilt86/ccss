@@ -13,14 +13,17 @@ router
 //this route will be for each profile     
 router
     .route("/answers/all/:UID")
-    .get(userController.findByUID)    
+    .get(userController.findByUID)
 
 // Sends all the answers based on question THROUGH POSTMAN
 router
     .route("/answers/:id")
     .get(userController.findByQuest)
-// .post(userController.create)
-// .put(userController.update)
+
+//
+router
+    .route("/answers/industry/:id")
+    .get(userController.findByIndustry)
 
 
 module.exports = router;
