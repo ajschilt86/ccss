@@ -14,7 +14,7 @@ export default () => (
                 email: 'jdandturk@gmail.com'
             }}
         />
-        <SideNavItem href='/Profile'>My Profile</SideNavItem>
+        <SideNavItem href='/profile'>My Profile</SideNavItem>
         <SideNavItem divider />
         <SideNavItem href='#!second'>30 Second Pitch</SideNavItem>
         <SideNavItem href='#!second'>My Skills</SideNavItem>
