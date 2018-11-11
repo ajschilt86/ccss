@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Route, Switch, Link } from "react-router-dom";
 import { Toaster, Intent } from "@blueprintjs/core";
 import { app, facebookProvider } from "../base";
+import Profile from "../pages/Profile";
 
 const loginStyles = {
   width: "90%",
@@ -37,6 +38,10 @@ class Login extends Component {
           this.setState({ redirect: true });
         }
       });
+  }
+
+  redirectFalse() {
+    this.setState({ redirect: false });
   }
 
   authWithEmailPassword(event) {
@@ -77,74 +82,80 @@ class Login extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/" } };
-
-    console.log(from)
+    // const { from } = this.props.location.state || { from: { pathname: "/profile"} };
 
     if (this.state.redirect === true) {
-      return <Redirect to={from} />;
-    }
-
-    return (
-      <div style={loginStyles}>
-        <Toaster
-          ref={element => {
-            this.toaster = element;
-          }}
-        />
-        {/* <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button> */}
-        {/* <hr style={{marginTop: "10px", marginBottom: "10px"}}/> */}
-        <form
-          onSubmit={event => {
-            this.authWithEmailPassword(event);
-          }}
-          ref={form => {
-            this.loginForm = form;
-          }}
-        >
-          <div
-            style={{ marginBottom: "10px" }}
-            className="pt-callout pt-icon-info-sign"
-          >
-            <h5>Note</h5>
-            If you don't have an account already, this form will create your
-            account.
-          </div>
-          <label className="pt-label">
-            Email
-            <input
-              style={{ width: "100%" }}
-              className="pt-input"
-              name="email"
-              type="email"
-              ref={input => {
-                this.emailInput = input;
-              }}
-              placeholder="Email"
-            />
-          </label>
-          <label className="pt-label">
-            Password
-            <input
-              style={{ width: "100%" }}
-              className="pt-input"
-              name="password"
-              type="password"
-              ref={input => {
-                this.passwordInput = input;
-              }}
-              placeholder="Password"
-            />
-          </label>
-          <input
-            style={{ width: "100%" }}
-            type="submit"
-            className="pt-button pt-intent-primary"
-            value="Log In"
+      console.log("huuuuuu");
+      // this.redirectFalse()
+      return (
+        // this.setState({ redirect: false }),
+        <Redirect to="/profile" />,
+        <Profile />  //comment    
+      );
+     
+    } 
+    if (this.state.redirect === false) {
+      return (
+        <div style={loginStyles}>
+          <Toaster
+            ref={element => {
+              this.toaster = element;
+            }}
           />
-        </form>
-      </div>
-    );
+          {/* <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button> */}
+          {/* <hr style={{marginTop: "10px", marginBottom: "10px"}}/> */}
+          <form
+            onSubmit={event => {
+              this.authWithEmailPassword(event);
+            }}
+            ref={form => {
+              this.loginForm = form;
+            }}
+          >
+            <div
+              style={{ marginBottom: "10px" }}
+              className="pt-callout pt-icon-info-sign"
+            >
+              <h5>Note</h5>
+              If you don't have an account already, this form will create your
+              account.
+            </div>
+            <label className="pt-label">
+              Email
+              <input
+                style={{ width: "100%" }}
+                className="pt-input"
+                name="email"
+                type="email"
+                ref={input => {
+                  this.emailInput = input;
+                }}
+                placeholder="Email"
+              />
+            </label>
+            <label className="pt-label">
+              Password
+              <input
+                style={{ width: "100%" }}
+                className="pt-input"
+                name="password"
+                type="password"
+                ref={input => {
+                  this.passwordInput = input;
+                }}
+                placeholder="Password"
+              />
+            </label>
+            <input
+              style={{ width: "100%" }}
+              type="submit"
+              className="pt-button pt-intent-primary"
+              value="Log In"
+            />
+          </form>
+        </div>
+      );
+    }
   }
 }
 

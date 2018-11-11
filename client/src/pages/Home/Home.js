@@ -81,14 +81,14 @@ class App extends Component {
           loading: false
         });
 
-        base.removeBinding(this.songsRef);
+        // base.removeBinding(this.songsRef);
       }
     });
   }
 
   componentWillUnmount() {
     this.removeAuthListener();
-    base.removeBinding(this.songsRef);
+    // base.removeBinding(this.songsRef);
   }
 
   render() {
