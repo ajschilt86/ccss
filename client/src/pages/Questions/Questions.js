@@ -5,6 +5,7 @@ import { List, ListItem } from "../../components/List";
 import { Link } from "react-router-dom";
 import Cards from "../../components/Card";
 import "./Questions.css"
+import Nav from "../../components/Nav"
 
 
 
@@ -22,19 +23,27 @@ class AnswerFeed extends Component {
     }
 
     loadAnswers() {
+        //gets content by industry, all questiions
         API.getAnswersByIndustry(this.state.industry)
+        //promise
             .then(res => {
+                //sets state 
                 this.setState({
+                    //answersIndustry array gets new data
                     answersIndustry: res.data
                 })
+                //console.log answersIndustry array
                 console.log(this.state.answersIndustry)
+                    //loops through answers
                     for(let i in this.state.answersIndustry) {
+                        //checks to see if the answer also has the question "pitch"
                         if(this.state.answersIndustry[i].pitch === "pitch") {
+                            //pushes answer to answers array in state
                             this.state.answers.push(this.state.answersIndustry)
                         }
                     }
 
-
+                // working code
                 // API.getAnswersByQuest("pitch")
                 //     .then(res => {
                 //         this.setState({
@@ -50,6 +59,7 @@ class AnswerFeed extends Component {
                 <h1>Share your 30 second pitch!</h1>
 
                 <div className="container">
+                <Nav />
                     <Row>
                         <Input
                             s={12}
