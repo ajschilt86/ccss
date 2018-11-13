@@ -1,9 +1,27 @@
 .answerBackground {
     background: url("./gravel.png");
-    height: 100vh;
+    height: 115%;
     width: 100vw;
 }
 
-.title {
-    border: 10px solid green;
+.questionHeader {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px 2px;
+    position: fixed;
+    top: 0%;
+    z-index: 2;
+    border-bottom: 10px solid #01BAEF;
+}
+
+.questionTitle {
+    position: relative;
+    top: 25%;
+
+}
+
+.container {
+    margin-top: 5%;
 }
