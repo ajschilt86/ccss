@@ -4,9 +4,9 @@ import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Link } from "react-router-dom";
 import Cards from "../../components/Card";
-import "./Questions.css"
+import "./Question4.css"
 import Nav from "../../components/Nav"
-import Footer from "../../components/Footer"
+
 
 
 
@@ -67,7 +67,7 @@ class AnswerFeed extends Component {
                         </Cards>
                     )}
                 </div>
-                <Footer />   
+
             </div>
         )
     }
