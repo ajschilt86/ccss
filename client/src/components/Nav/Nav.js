@@ -16,11 +16,11 @@ export default () => (
         />
         <SideNavItem href='/profile'>My Questionnaire</SideNavItem>
         <SideNavItem divider />
-        <SideNavItem href='/questions'>30 Second Pitch</SideNavItem>
-        <SideNavItem href='#!second'>My Skills</SideNavItem>
-        <SideNavItem href='#!second'>My Passions</SideNavItem>
-        <SideNavItem href='#!second'>My Values</SideNavItem>
-        <SideNavItem href='#!second'>Help Wanted</SideNavItem>
+        <SideNavItem href='/Questions'>30 Second Pitch</SideNavItem>
+        <SideNavItem href='/Question2'>My Skills</SideNavItem>
+        <SideNavItem href='/Question3'>My Passions</SideNavItem>
+        <SideNavItem href='/Question4'>My Values</SideNavItem>
+        <SideNavItem href='/Question5'>Help Wanted</SideNavItem>
     </SideNav>
 )
 
