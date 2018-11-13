@@ -1,4 +1,9 @@
-body {
-    background: url("./gravel.png")
+.answerBackground {
+    background: url("./gravel.png");
+    height: 100vh;
+    width: 100vw;
 }
 
+.title {
+    border: 10px solid green;
+}

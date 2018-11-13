@@ -58,6 +58,7 @@ class App extends Component {
         currentUser: user,
         authenticated: true
       });
+      console.log(this.state.currentUser)
     } else {
       this.setState({
         currentUser: null,

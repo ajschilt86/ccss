@@ -25,7 +25,7 @@ class AnswerFeed extends Component {
     loadAnswers() {
         //gets content by industry, all questiions
         API.getAnswersByIndustry(this.state.industry)
-        //promise
+            //promise
             .then(res => {
                 //sets state 
                 this.setState({
@@ -34,14 +34,14 @@ class AnswerFeed extends Component {
                 })
                 //console.log answersIndustry array
                 console.log(this.state.answersIndustry)
-                    //loops through answers
-                    for(let i in this.state.answersIndustry) {
-                        //checks to see if the answer also has the question "pitch"
-                        if(this.state.answersIndustry[i].pitch === "pitch") {
-                            //pushes answer to answers array in state
-                            this.state.answers.push(this.state.answersIndustry)
-                        }
+                //loops through answers
+                for (let i in this.state.answersIndustry) {
+                    //checks to see if the answer also has the question "pitch"
+                    if (this.state.answersIndustry[i].pitch === "pitch") {
+                        //pushes answer to answers array in state
+                        this.state.answers.push(this.state.answersIndustry)
                     }
+                }
 
                 // working code
                 // API.getAnswersByQuest("pitch")
@@ -55,11 +55,12 @@ class AnswerFeed extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Share your 30 second pitch!</h1>
-
+            <div className="answerBackground">
+                <Cards className="title">
+                    <h1>Share your 30 second pitch!</h1>
+                </Cards>
                 <div className="container">
-                <Nav />
+                    <Nav />
                     <Row>
                         <Input
                             s={12}
