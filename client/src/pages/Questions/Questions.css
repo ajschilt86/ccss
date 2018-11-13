@@ -1,5 +1,5 @@
-.answerBackground {
-    background: url("./gravel.png");
+.questionBackground {
+    background: url("../images/gravel.png");
     height: 115%;
     width: 100vw;
     background-attachment: fixed;

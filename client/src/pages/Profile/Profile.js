@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Nav from "../../components/Nav";
 import { Input, Row, Button } from "react-materialize";
+import "./Profile.css"
 
 class Profile extends Component {
     //these are the dynamic elements on the profile page    
@@ -121,7 +122,7 @@ class Profile extends Component {
     //renders our forms
     render() {
         return (
-            <div>
+            <div className="profileBackground">
                 <div className="container">
                     <Nav />
 
