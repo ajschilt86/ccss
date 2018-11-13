@@ -35,12 +35,12 @@ class AnswerFeed extends Component {
 
     render() {
         return (
-            <div className="questionBackground">
-                <div className="questionHeader">
-                    <h1 className="questionTitle">Share your 30 second pitch!</h1>
+            <div className="question5Background">
+                <div className="question5Header">
+                    <h1 className="question5Title">Post a help wanted ad!</h1>
                     <Nav style={{color: "red"}}/>
                 </div>
-                <div className="container questionContainer">
+                <div className="container question5Container">
 
                     {/* <Row>
                         <Input
