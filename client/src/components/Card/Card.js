@@ -5,7 +5,6 @@ import "./Card.css"
 
 const Cards = props => {
   return (
-    <div className="card">
       <Col m={6} s={12}>
         <Card
           className=""
@@ -14,7 +13,6 @@ const Cards = props => {
           {props.children}
         </Card>
       </Col>
-    </div>
   );
 };
 
