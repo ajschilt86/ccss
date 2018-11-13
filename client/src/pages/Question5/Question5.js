@@ -24,7 +24,7 @@ class AnswerFeed extends Component {
 
     loadAnswers() {
 
-        API.getAnswersByQuest("pitch")
+        API.getAnswersByQuest("help")
             .then(res => {
                 this.setState({
                     answers: res.data
