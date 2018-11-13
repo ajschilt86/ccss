@@ -23,14 +23,14 @@ class AnswerFeed extends Component {
     }
 
     loadAnswers() {
-       
-                API.getAnswersByQuest("pitch")
-                    .then(res => {
-                        this.setState({
-                            answers: res.data
-                        })
-                    })
-            
+
+        API.getAnswersByQuest("pitch")
+            .then(res => {
+                this.setState({
+                    answers: res.data
+                })
+            })
+
     }
 
     render() {
@@ -38,10 +38,10 @@ class AnswerFeed extends Component {
             <div className="answerBackground">
                 <div className="questionHeader">
                     <h1 className="questionTitle">Share your 30 second pitch!</h1>
-                    <Nav />
+                    <Nav style={{color: "red"}}/>
                 </div>
                 <div className="container">
-                    
+
                     {/* <Row>
                         <Input
                             s={12}
