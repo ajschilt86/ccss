@@ -23,45 +23,26 @@ class AnswerFeed extends Component {
     }
 
     loadAnswers() {
-        //gets content by industry, all questiions
-        API.getAnswersByIndustry(this.state.industry)
-            //promise
-            .then(res => {
-                //sets state 
-                this.setState({
-                    //answersIndustry array gets new data
-                    answersIndustry: res.data
-                })
-                //console.log answersIndustry array
-                console.log(this.state.answersIndustry)
-                //loops through answers
-                for (let i in this.state.answersIndustry) {
-                    //checks to see if the answer also has the question "pitch"
-                    if (this.state.answersIndustry[i].pitch === "pitch") {
-                        //pushes answer to answers array in state
-                        this.state.answers.push(this.state.answersIndustry)
-                    }
-                }
-
-                // working code
-                // API.getAnswersByQuest("pitch")
-                //     .then(res => {
-                //         this.setState({
-                //             answers: res.data
-                //         })
-                //     })
-            })
+       
+                API.getAnswersByQuest("pitch")
+                    .then(res => {
+                        this.setState({
+                            answers: res.data
+                        })
+                    })
+            
     }
 
     render() {
         return (
             <div className="answerBackground">
-                <Cards className="title">
-                    <h1>Share your 30 second pitch!</h1>
-                </Cards>
-                <div className="container">
+                <div className="questionHeader">
+                    <h1 className="questionTitle">Share your 30 second pitch!</h1>
                     <Nav />
-                    <Row>
+                </div>
+                <div className="container">
+                    
+                    {/* <Row>
                         <Input
                             s={12}
                             type='select'
@@ -75,7 +56,7 @@ class AnswerFeed extends Component {
                             <option value='Art'>Art</option>
                             <option value='Entrepreneurship'>Entrepreneurship</option>
                         </Input>
-                    </Row>
+                    </Row> */}
                     {this.state.answers.map((answer) =>
                         <Cards>
                             <ListItem key={answer._id}>
