@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import Login from "../../components/Login";
 import Logout from "../../components/Logout";
 import { app, base } from "../../base";
+import "./Home.css";
 // import {} from 'dotenv/config';
 
 // function AuthenticatedRoute({component: Component, authenticated, ...rest}) {
@@ -58,7 +59,7 @@ class App extends Component {
         currentUser: user,
         authenticated: true
       });
-      console.log(this.state.currentUser)
+      console.log(this.state.currentUser);
     } else {
       this.setState({
         currentUser: null,
@@ -168,33 +169,47 @@ class App extends Component {
             <Row>
               <Col s={6} className="grid-example">
                 {/* <img src="./images/all-hands.jpg" width="380px" alt="all hands" /> */}
-                <img src="./images/market.jpg" width="380px" height="380px" alt="all hands" />
+                <img
+                  src="./images/market.jpg"
+                  width="380px"
+                  height="380px"
+                  alt="all hands"
+                />
               </Col>
               <Col s={6} className="grid-example">
-                <h1>In hand new connections</h1>
-                <h3>Free to use!</h3>
-                <p>
-                  We're three friends attending a Northwestern Bootcamp and we
-                  were challenged to make an app that has unique utility. To
-                  achieve this we created a way to speed network online. Using
-                  the Chicago Community Skill Share (CCSS) you can promote
-                  yourself and find partners, collaborators, and friends. It's
-                  free to use for anyone.
-                </p>
+                <div className="mainPageParagraphOne">
+                  <h1>In hand new connections</h1>
+                  <h3>Free to use!</h3>
+                  <p>
+                    We're three friends attending a Northwestern Bootcamp and we
+                    were challenged to make an app that has unique utility. To
+                    achieve this we created a way to speed network online. Using
+                    the Chicago Community Skill Share (CCSS) you can promote
+                    yourself and find partners, collaborators, and friends. It's
+                    free to use for anyone.
+                  </p>
+                </div>
               </Col>
             </Row>
             <Row>
               <Col s={6} className="grid-example">
-                <h1>Online Speed Networking</h1>
-                <p>
-                  Answer 5 quick questions and then browse other people's
-                  answers. See what skills people in your area are offering.
-                  Post and find help wanted ads. Meet passionate people. Make
-                  new connections.
-                </p>
+                <div className="mainPageParagraphTwo">
+                  <h1>Online Speed Networking</h1>
+                  <p>
+                    Answer 5 quick questions and then browse other people's
+                    answers. See what skills people in your area are offering.
+                    Post and find help wanted ads. Meet passionate people. Make
+                    new connections.
+                  </p>
+                </div>
               </Col>
               <Col s={6} className="grid-example">
-                <img src="./images/market.jpg" width="380" height="380px" alt="market" />
+                <img
+                  src="./images/market.jpg"
+                  width="380"
+                  height="380px"
+                  alt="market"
+                />
               </Col>
             </Row>
           </div>
