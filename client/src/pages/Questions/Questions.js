@@ -40,7 +40,7 @@ class AnswerFeed extends Component {
                     <h1 className="questionTitle">Share your 30 second pitch!</h1>
                     <Nav style={{color: "red"}}/>
                 </div>
-                <div className="container">
+                <div className="container questionContainer">
 
                     {/* <Row>
                         <Input

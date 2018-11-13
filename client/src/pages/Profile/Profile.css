@@ -5,9 +5,9 @@
     background-attachment: fixed;
 }
 
-.container {
+.profileContainer {
     background-color: white;
     box-shadow: 2px 2px 2px darkgrey;
-    border: 10px solid #01BAEF;
-    padding: 10px;
+    border: 20px solid #C1CFDA;
+    padding: 25px;
 }

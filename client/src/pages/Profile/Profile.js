@@ -123,7 +123,10 @@ class Profile extends Component {
     render() {
         return (
             <div className="profileBackground">
-                <div className="container">
+                <div className="container profileContainer">
+                    <Row>
+                        <h1>Questionnaire</h1>
+                    </Row>
                     <Nav />
 
                     <form>
