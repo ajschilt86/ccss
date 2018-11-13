@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import Nav from "../../components/Nav";
 import { Input, Row, Button } from "react-materialize";
 import "./Profile.css"
+import Footer from "../../components/Footer"
 
 class Profile extends Component {
     //these are the dynamic elements on the profile page    
@@ -229,6 +230,7 @@ class Profile extends Component {
                         </Row>
                     </form>
                 </div>
+                <Footer />
             </div >
         )
     }

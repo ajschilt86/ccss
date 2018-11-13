@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Footer.css"
 
 class Footer extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer>
+      <footer className="footer">
         <ul className="site-link">
           <li>
             &copy; {this.state.year} CCSS
