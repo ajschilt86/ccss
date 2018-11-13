@@ -168,7 +168,7 @@ class App extends Component {
             <Row>
               <Col s={6} className="grid-example">
                 {/* <img src="./images/all-hands.jpg" width="380px" alt="all hands" /> */}
-                <img src="./images/market.jpg" width="380px" alt="all hands" />
+                <img src="./images/market.jpg" width="380px" height="380px" alt="all hands" />
               </Col>
               <Col s={6} className="grid-example">
                 <h1>In hand new connections</h1>
@@ -194,7 +194,7 @@ class App extends Component {
                 </p>
               </Col>
               <Col s={6} className="grid-example">
-                <img src="./images/market.jpg" width="380" alt="market" />
+                <img src="./images/market.jpg" width="380" height="380px" alt="market" />
               </Col>
             </Row>
           </div>
