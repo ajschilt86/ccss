@@ -14,13 +14,13 @@ export default () => (
                 email: 'jdandturk@gmail.com'
             }}
         />
-        <SideNavItem href='/profile'>My Profile</SideNavItem>
+        <SideNavItem href='/profile'>My Questionnaire</SideNavItem>
         <SideNavItem divider />
         <SideNavItem href='/questions'>30 Second Pitch</SideNavItem>
         <SideNavItem href='#!second'>My Skills</SideNavItem>
         <SideNavItem href='#!second'>My Passions</SideNavItem>
         <SideNavItem href='#!second'>My Values</SideNavItem>
-        <SideNavItem href='#!second'>Help I need</SideNavItem>
+        <SideNavItem href='#!second'>Help Wanted</SideNavItem>
     </SideNav>
 )
 

@@ -1,3 +1,13 @@
-.container {
+.profileBackground {
+    background: url("../images/gravel.png");
+    height: 115%;
+    width: 100vw;
+    background-attachment: fixed;
+}
+
+.profileContainer {
     background-color: white;
+    box-shadow: 2px 2px 2px darkgrey;
+    border: 20px solid #C1CFDA;
+    padding: 25px;
 }
