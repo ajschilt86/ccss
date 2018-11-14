@@ -18,6 +18,7 @@ class Header extends Component {
 
   render() {
     return (
+      <div className="titleBody">
       <nav className="pt-navbar">
         {
           this.props.authenticated
@@ -25,17 +26,18 @@ class Header extends Component {
             <div className="pt-navbar-group pt-align-right">
               <h1 className="title">Chicago Community Skill Share</h1>
               <a href="/profile"><button className="pt-button pt-minimal pt-icon-annotation">Questionnaire</button></a>
-              <Link className="pt-button pt-minimal pt-icon-log-out" to="/logout" aria-label="Log Out">Logout</Link>             
+              <Link className="pt-button pt-minimal pt-icon-log-out logButton" to="/logout" aria-label="Log Out">Logout</Link>             
             </div>
           )
             : (
               <div className="pt-navbar-group pt-align-right">
                 <h1 className="title">Chicago Community Skill Share</h1>
-                <Link className="pt-button pt-intent-primary" to="/login" style={{color: "black"}}>Register/Log In</Link>
+                <Link className="pt-button pt-intent-primary logButton" to="/login" style={{color: "black"}}>Register/Log In</Link>
               </div>
             )
         }
       </nav>
+      </div>
     );
   }
 }

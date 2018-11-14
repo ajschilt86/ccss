@@ -1,8 +1,33 @@
-.mainPageParagraphOne {
+/* .mainPageParagraphOne {
     vertical-align: middle;
    
 }
 
 .mainPageParagraphTwo {
 
+} */
+
+.homePageTitle {
+    height: 200px;
+    background-color: #659B5E;
+    color: white;
+    line-height: 160px;
+    border: 15px solid green;
+    text-decoration: none;
+    
+}
+
+.homePageTitle:hover {
+    transform: translateY(-10px);
+    animation: all .2s;
+    text-decoration: none;
+}
+
+.homeBody {
+    max-Width: 1160px;
+    margin: 0 auto;
+}
+
+.homeContainer {
+    margin-bottom: 25px;
 }
