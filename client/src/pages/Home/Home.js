@@ -111,7 +111,7 @@ class App extends Component {
     // }
 
     return (
-      <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
+      <div className="homeBody">
         <BrowserRouter>
           <div>
             <Header
@@ -148,7 +148,14 @@ class App extends Component {
             </div>
           </div>
         </BrowserRouter>
-        <div>
+        <div className="homeContainer">
+          <img
+            src="./images/chicago.jpg"
+            width="100%"
+            // height="500px"
+            alt="chicago"
+          />
+          <a href="/profile"><h1 className="homePageTitle">Skill Share Free Questionnaire</h1></a>
           <div className="container">
             <div className="hero">
               {/* <video width="100vw" height="100vh" controls>
@@ -169,14 +176,14 @@ class App extends Component {
             <Row>
               <Col s={6} className="grid-example">
                 {/* <img src="./images/all-hands.jpg" width="380px" alt="all hands" /> */}
-                <img
+                {/* <img
                   src="./images/market.jpg"
                   width="380px"
                   height="380px"
                   alt="all hands"
-                />
+                /> */}
               </Col>
-              <Col s={6} className="grid-example">
+              <Col s={12} className="grid-example">
                 <div className="mainPageParagraphOne">
                   <h1>In hand new connections</h1>
                   <h3>Free to use!</h3>
@@ -192,7 +199,7 @@ class App extends Component {
               </Col>
             </Row>
             <Row>
-              <Col s={6} className="grid-example">
+              <Col s={12} className="grid-example">
                 <div className="mainPageParagraphTwo">
                   <h1>Online Speed Networking</h1>
                   <p>
@@ -204,12 +211,12 @@ class App extends Component {
                 </div>
               </Col>
               <Col s={6} className="grid-example">
-                <img
+                {/* <img
                   src="./images/market.jpg"
                   width="380"
                   height="380px"
                   alt="market"
-                />
+                /> */}
               </Col>
             </Row>
           </div>
