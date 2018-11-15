@@ -24,9 +24,9 @@ module.exports = {
             .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     },
-    findByUID: (req, res) => {
+    findOne: (req, res) => {
         db.Answers
-            .findById({ UID: req.params.id })
+            .find({ UID: req.params.UID })
             .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     },

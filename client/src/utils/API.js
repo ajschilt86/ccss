@@ -1,11 +1,12 @@
 import axios from "axios";
 
 export default {
-    getAnswersByUID: function (id) {
-        return axios.get("/api/users/" + id)
+    getAnswersByUID: function (UID) {
+        console.log("hitting axios")
+        return axios.get("/api/users/answers/all/" + UID)
     },
-    getAll: function(){
-        return axios.get("/all", function(){
+    getAll: function () {
+        return axios.get("/all", function () {
             console.log('Hitting get route');
         })
     },

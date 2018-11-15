@@ -40,7 +40,8 @@ class Profile extends Component {
     loadProfile = () => {
         API.getAnswersByUID()
             .then(res =>
-                this.setState({ Answers: res.data, pitch: "" })
+                console.log(res.data)
+                // this.setState({ Answers: res.data, pitch: "" })
             )
             .catch(err => console.log(err));
     };
@@ -120,19 +121,19 @@ class Profile extends Component {
             })
                 .catch(err => console.log(err));
         }
-        
+
     };
 
     getUID = () => {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 console.log('This is the user: ', user.uid)
-                this.setState({...user})
+                this.setState({ ...user })
                 console.log(this.state.uid)
             } else {
                 // No user is signed in.
                 console.log('There is no logged in user');
-                return("unknown")
+                return ("unknown")
             }
         });
     }
