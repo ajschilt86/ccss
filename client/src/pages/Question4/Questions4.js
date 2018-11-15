@@ -39,7 +39,9 @@ class AnswerFeed extends Component {
             <div className="question4Background">
                 <div className="question4Header">
                     <h1 className="question4Title">What are your values?</h1>
-                    <Nav style={{color: "red"}}/>
+                    <div className="questionNav">
+                        <Nav />
+                    </div>
                 </div>
                 <div className="container question4Container">
 

@@ -15,7 +15,7 @@
     /* position: fixed; */
     top: 0%;
     z-index: 2;
-    border-bottom: 10px solid red;
+    border-bottom: 10px solid #EE6352;
 }
 
 .question3Header h1 {
@@ -25,6 +25,12 @@
 .question3Title {
     position: relative;
     top: 25%;
+}
+
+.questionNav {
+    position: relative;
+    left: 45%;
+    margin-top: 25px;
 }
 
 .question3Container {
