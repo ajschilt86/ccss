@@ -1,10 +1,3 @@
-.homeTitle {
-    /* position: relative;
-    top: 50%;
-    left: 5%; */
-    height: 100px;
-}
-
 .titleBody {
     margin: 0 auto;
     width: 100%;
@@ -13,8 +6,23 @@
 .logButton {
     color: white;
     font-size: 40px;
+    margin-top: 45px;
 }
 
 .pt-navbar {
     height: 100px !important;
+}
+
+.homeTitleLogout {
+    position: relative;
+    top: 50%;
+    left: 10%;
+    height: 100px;
+}
+
+.homeTitleLogin {
+    position: relative;
+    top: 50%;
+    left: 5%;
+    height: 100px;
 }

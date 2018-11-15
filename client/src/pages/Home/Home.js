@@ -61,8 +61,7 @@ class App extends Component {
       <div className="homeBody">
         <BrowserRouter>
           <div>
-            <Header
-              addSong={this.addSong}
+            <Header id="homeHeader"
               authenticated={this.state.authenticated}
             />
             <div className="main-content" style={{ padding: "1em" }}>
@@ -87,7 +86,7 @@ class App extends Component {
             width="100%"
             alt="chicago"
           />
-          <a href="/profile"><h1 className="homePageTitle">Skill Share Free Questionnaire</h1></a>
+          <a href="#homeHeader"><h1 className="homePageTitle">Skill Share Free Questionnaire</h1></a>
           <div className="container">
             <div className="hero">
             </div>
