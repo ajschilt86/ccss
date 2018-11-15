@@ -41,7 +41,6 @@ class AnswerFeed extends Component {
                     <Nav style={{color: "red"}}/>
                 </div>
                 <div className="container questionContainer">
-
                     {/* <Row>
                         <Input
                             s={12}
