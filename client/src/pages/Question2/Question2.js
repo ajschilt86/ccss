@@ -14,7 +14,7 @@ import Footer from "../../components/Footer"
 class AnswerFeed extends Component {
     state = {
         answersIndustry: [],
-        answers: ["test1", "test2"],
+        answers: [],
         email: "",
         industry: ""
     };
