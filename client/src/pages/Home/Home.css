@@ -43,6 +43,17 @@
     font-size: 3em;
 }
 
+.homePageSignin-Out {
+    height: 100px;
+    background-color: #659B5E;
+    color: white;
+    line-height: 65px;
+    border: 15px solid green;
+    text-decoration: none;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 3em;
+}
+
 .homeBody {
     max-Width: 1160px;
     margin: 0 auto;
