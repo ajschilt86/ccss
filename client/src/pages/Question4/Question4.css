@@ -15,7 +15,7 @@
     /* position: fixed; */
     top: 0%;
     z-index: 2;
-    border-bottom: 10px solid green;
+    border-bottom: 10px solid #659B5E;
 }
 
 .question4Header h1 {
@@ -25,6 +25,12 @@
 .question4Title {
     position: relative;
     top: 25%;
+}
+
+.questionNav {
+    position: relative;
+    left: 45%;
+    margin-top: 25px;
 }
 
 .question4Container {
