@@ -2,11 +2,11 @@
   "name": "Chicago-Community-Skill-Share",
   "version": "1.0.0",
   "scripts": {
-    "install": "(cd client && yarn) && (cd ccss && npm)",
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "install": "(cd client && yarn) && (cd ccss && npm)",
+    "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd ccss && PORT=3001 yarn start\""
   },
   "dependencies": {
     "@blueprintjs/core": "^3.8.0",
