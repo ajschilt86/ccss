@@ -7,6 +7,14 @@
 
 } */
 
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+
+@fontface {
+    font-family: 'Allerta Stencil', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Allerta+Stencil')
+}
+
+
 .homePageTitle {
     height: 200px;
     background-color: #659B5E;
@@ -14,7 +22,8 @@
     line-height: 160px;
     border: 15px solid green;
     text-decoration: none;
-    
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 4em;
 }
 
 .homePageTitle:hover {

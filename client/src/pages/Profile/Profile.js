@@ -4,6 +4,7 @@ import Nav from "../../components/Nav";
 import { Input, Row, Button } from "react-materialize";
 import "./Profile.css"
 import Footer from "../../components/Footer"
+import * as firebase from 'firebase';
 
 class Profile extends Component {
     //these are the dynamic elements on the profile page    
@@ -25,6 +26,7 @@ class Profile extends Component {
     //waits for component to mount
     componentDidMount() {
         // this.loadProfile();
+        this.getUID();
     }
 
     handleInputChange = event => {
@@ -51,7 +53,7 @@ class Profile extends Component {
         if (this.state.pitch) {
             API.saveAnswers({
                 answer: this.state.pitch,
-                UID: this.state.questionOneAnswer,
+                UID: this.state.uid,
                 email: this.state.email,
                 industry: this.state.industry,
                 question: document.getElementById("pitch").name,
@@ -66,7 +68,7 @@ class Profile extends Component {
         if (this.state.skills) {
             API.saveAnswers({
                 answer: this.state.skills,
-                UID: this.state.questionOneAnswer,
+                UID: this.state.uid,
                 email: this.state.email,
                 industry: this.state.industry,
                 question: document.getElementById("skills").name,
@@ -81,7 +83,7 @@ class Profile extends Component {
         if (this.state.passions) {
             API.saveAnswers({
                 answer: this.state.passions,
-                UID: this.state.questionOneAnswer,
+                UID: this.state.uid,
                 email: this.state.email,
                 industry: this.state.industry,
                 question: document.getElementById("passions").name,
@@ -96,7 +98,7 @@ class Profile extends Component {
         if (this.state.values) {
             API.saveAnswers({
                 answer: this.state.values,
-                UID: this.state.questionOneAnswer,
+                UID: this.state.uid,
                 email: this.state.email,
                 industry: this.state.industry,
                 question: document.getElementById("values").name,
@@ -111,17 +113,43 @@ class Profile extends Component {
         if (this.state.help) {
             API.saveAnswers({
                 answer: this.state.help,
-                UID: this.state.questionOneAnswer,
+                UID: this.state.uid,
                 email: this.state.email,
                 industry: this.state.industry,
                 question: document.getElementById("help").name,
             })
                 .catch(err => console.log(err));
         }
+        
     };
+
+    getUID = () => {
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                console.log('This is the user: ', user.uid)
+                this.setState({...user})
+                console.log(this.state.uid)
+            } else {
+                // No user is signed in.
+                console.log('There is no logged in user');
+                return("unknown")
+            }
+        });
+    }
+
 
     //renders our forms
     render() {
+        // firebase.auth().onAuthStateChanged(function (user) {
+        //     if (user) {
+        //         console.log('This is the user: ', user.uid)
+        //     } else {
+        //         // No user is signed in.
+        //         console.log('There is no logged in user');
+        //     }
+        // });
+
+
         return (
             <div className="profileBackground">
                 <div className="container profileContainer">
