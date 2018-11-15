@@ -1,8 +1,8 @@
 .homeTitle {
-    position: relative;
+    /* position: relative;
     top: 50%;
-    left: 10%;
-    height: 50px;
+    left: 5%; */
+    height: 100px;
 }
 
 .titleBody {
@@ -13,4 +13,8 @@
 .logButton {
     color: white;
     font-size: 40px;
+}
+
+.pt-navbar {
+    height: 100px !important;
 }
