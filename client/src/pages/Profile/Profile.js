@@ -155,6 +155,7 @@ class Profile extends Component {
             <div className="profileBackground">
                 <div className="container profileContainer">
                     <Row>
+                        <img src="./images/logo2.jpg" className="profileTitle"></img>
                         <h1>Questionnaire</h1>
                     </Row>
                     <Nav />
@@ -260,7 +261,7 @@ class Profile extends Component {
                     </form>
                 </div>
                 <Footer />
-            </div >
+            </div>
         )
     }
 }

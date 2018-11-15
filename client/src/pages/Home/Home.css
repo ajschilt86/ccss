@@ -32,6 +32,17 @@
     text-decoration: none;
 }
 
+.homePageTitle2 {
+    height: 200px;
+    background-color: #659B5E;
+    color: white;
+    line-height: 160px;
+    border: 15px solid green;
+    text-decoration: none;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 3em;
+}
+
 .homeBody {
     max-Width: 1160px;
     margin: 0 auto;
@@ -40,3 +51,16 @@
 .homeContainer {
     margin-bottom: 25px;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .homePageTitle {
+        font-size: 2em;
+        line-height: 2em;
+    }
+    .homePageTitle2 {
+        font-size: 2em;
+        line-height: 2em;
+    }
+
+}
+
