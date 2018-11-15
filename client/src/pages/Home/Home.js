@@ -60,8 +60,8 @@ class App extends Component {
     return (
       <div className="homeBody">
         <BrowserRouter>
-          <div>
-            <Header id="homeHeader"
+          <div id="homeHeader">
+            <Header 
               authenticated={this.state.authenticated}
             />
             <div className="main-content" style={{ padding: "1em" }}>
@@ -132,6 +132,7 @@ class App extends Component {
               </Col>
             </Row>
           </div>
+          <a href="#homeHeader"><h6 className="homePageSignin-Out">Sign-Up/Sign-In</h6></a>
           <h3 className="homePageTitle2">Thank you for enriching your community</h3>
         </div>
         <Footer />
