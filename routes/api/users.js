@@ -13,7 +13,7 @@ router
 //this route will be for each profile     
 router
     .route("/answers/all/:UID")
-    .get(userController.findByUID)
+    .get(userController.findOne)
 
 // Sends all the answers based on question THROUGH POSTMAN
 router
