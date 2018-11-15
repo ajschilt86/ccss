@@ -19,6 +19,7 @@ export default () => (
         <SideNavItem href='/Question3'>My Passions</SideNavItem>
         <SideNavItem href='/Question4'>My Values</SideNavItem>
         <SideNavItem href='/Question5'>Help Wanted</SideNavItem>
+        <SideNavItem href='/'>Home and log out</SideNavItem>
     </SideNav>
 )
 
