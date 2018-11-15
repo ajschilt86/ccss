@@ -1,6 +1,8 @@
-.title {
-    text-align: center;
-    margin: 0 auto;
+.homeTitle {
+    position: relative;
+    top: 50%;
+    left: 10%;
+    height: 50px;
 }
 
 .titleBody {

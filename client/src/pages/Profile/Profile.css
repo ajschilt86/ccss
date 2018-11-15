@@ -3,11 +3,27 @@
     height: 115%;
     width: 100vw;
     background-attachment: fixed;
+    background-repeat: cover;
+    /* position: fixed adds sidenav overlay, breaks page scrolling */
+    position: relative;
+    top: -25px;
 }
+
+
 
 .profileContainer {
     background-color: white;
     box-shadow: 2px 2px 2px darkgrey;
     border: 20px solid #C1CFDA;
     padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+
+.profileTitle {
+    position: relative;
+    top: 50%;
+    left: 10%;
+    transform: translateX(-70%);
+    height: 50px;
 }
