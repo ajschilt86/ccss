@@ -21,7 +21,7 @@ var answersSchema = new Schema({
   // summary, a string, must be entered
   UID: {
     type: String,
-    required: false
+    required: true
   },
   // url, a string, must be entered
   industry: {
