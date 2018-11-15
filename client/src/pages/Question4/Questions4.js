@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Cards from "../../components/Card";
 import "./Question4.css"
 import Nav from "../../components/Nav"
+import Footer from "../../components/Footer"
 
 
 
@@ -67,7 +68,7 @@ class AnswerFeed extends Component {
                         </Cards>
                     )}
                 </div>
-
+                <Footer />
             </div>
         )
     }
