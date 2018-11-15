@@ -1,5 +1,6 @@
 import React from "react";
 import { SideNav, SideNavItem, Button } from 'react-materialize'
+import "./Nav.css"
 
 export default () => (
     <SideNav
@@ -8,10 +9,7 @@ export default () => (
     >
         <SideNavItem userView
             user={{
-                background: 'images/sideNavPic.jpeg',
-                image: 'images/mMouse.jpg',
-                name: 'Anthony Doe',
-                email: 'jdandturk@gmail.com'
+                background: 'images/all-hands-small.jpg',
             }}
         />
         <SideNavItem href='/profile'>My Questionnaire</SideNavItem>
