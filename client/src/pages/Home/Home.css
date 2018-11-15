@@ -23,6 +23,7 @@
     border: 15px solid green;
     text-decoration: none;
     font-family: 'Allerta Stencil', sans-serif;
+    font-size: 4em;
 }
 
 .homePageTitle:hover {
