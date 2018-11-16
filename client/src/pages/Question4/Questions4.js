@@ -58,7 +58,8 @@ class AnswerFeed extends Component {
                     {this.state.answers.map((answer) =>
                         <Cards>
                             <ListItem key={answer._id}>
-                                <h2>{answer.answer}</h2>
+                                <p>{answer.answer}</p>
+                                <hr></hr>
                                 <h4>by {answer.email}</h4>
                                 <h4>Industry: {answer.industry}</h4>
                             </ListItem>
