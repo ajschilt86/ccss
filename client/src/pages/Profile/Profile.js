@@ -5,6 +5,8 @@ import { Input, Row, Button } from "react-materialize";
 import "./Profile.css"
 import Footer from "../../components/Footer"
 import * as firebase from 'firebase';
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 class Profile extends Component {
     //these are the dynamic elements on the profile page    
@@ -18,6 +20,10 @@ class Profile extends Component {
         email: "",
         industry: ""
     };
+
+    toastId = null;
+
+    notify = () => this.toastId = toast("We've collected your submission!", { type: toast.TYPE.INFO, autoClose: 2000 });
 
     handleAnswerUpdate = () => {
         this.setState({})
@@ -59,6 +65,7 @@ class Profile extends Component {
                 industry: this.state.industry,
                 question: document.getElementById("pitch").name,
             })
+                .then(this.notify)
                 .catch(err => console.log(err));
         }
     };
@@ -74,6 +81,7 @@ class Profile extends Component {
                 industry: this.state.industry,
                 question: document.getElementById("skills").name,
             })
+                .then(this.notify)
                 .catch(err => console.log(err));
         }
     };
@@ -89,6 +97,7 @@ class Profile extends Component {
                 industry: this.state.industry,
                 question: document.getElementById("passions").name,
             })
+                .then(this.notify)
                 .catch(err => console.log(err));
         }
     };
@@ -104,6 +113,7 @@ class Profile extends Component {
                 industry: this.state.industry,
                 question: document.getElementById("values").name,
             })
+                .then(this.notify)
                 .catch(err => console.log(err));
         }
     };
@@ -119,6 +129,7 @@ class Profile extends Component {
                 industry: this.state.industry,
                 question: document.getElementById("help").name,
             })
+                .then(this.notify)
                 .catch(err => console.log(err));
         }
 
@@ -198,6 +209,7 @@ class Profile extends Component {
                             <Button
                                 disabled={!this.state.pitch} onClick={this.handleFormSubmitPitch}>
                                 Save
+                                <ToastContainer />
                             </Button>
                         </Row>
                         <Row>
@@ -213,6 +225,7 @@ class Profile extends Component {
                             <Button
                                 disabled={!this.state.skills} onClick={this.handleFormSubmitSkills}>
                                 Save
+                                <ToastContainer />
                         </Button>
                         </Row>
                         <Row>
@@ -228,6 +241,7 @@ class Profile extends Component {
                             <Button
                                 disabled={!this.state.passions} onClick={this.handleFormSubmitPassions}>
                                 Save
+                                <ToastContainer />
                             </Button>
                         </Row>
                         <Row>
@@ -242,6 +256,7 @@ class Profile extends Component {
                             <Button
                                 disabled={!this.state.values} onClick={this.handleFormSubmitValues}>
                                 Save
+                                <ToastContainer />
                         </Button>
                         </Row>
                         <Row>
@@ -256,6 +271,7 @@ class Profile extends Component {
                             <Button
                                 disabled={!this.state.help} onClick={this.handleFormSubmitHelp}>
                                 Save
+                                <ToastContainer />
                         </Button>
                         </Row>
                     </form>
