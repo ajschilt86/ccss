@@ -5,7 +5,7 @@
 
 .logButton {
     color: white;
-    font-size: 40px;
+    font-size: 15px;
     margin-top: 45px;
 }
 
@@ -16,7 +16,7 @@
 .homeTitleLogout {
     position: relative;
     top: 50%;
-    left: 9.5%;
+    left: 10%;
     height: 100px;
 }
 
