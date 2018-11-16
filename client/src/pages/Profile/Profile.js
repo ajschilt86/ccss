@@ -52,11 +52,9 @@ class Profile extends Component {
             .catch(err => console.log(err));
     };
 
-
     //records data when questionOneAnswer button is pressed
     handleFormSubmitPitch = event => {
         event.preventDefault();
-        console.log(event);
         if (this.state.pitch) {
             API.saveAnswers({
                 answer: this.state.pitch,
@@ -72,7 +70,6 @@ class Profile extends Component {
 
     handleFormSubmitSkills = event => {
         event.preventDefault();
-        console.log(event);
         if (this.state.skills) {
             API.saveAnswers({
                 answer: this.state.skills,
@@ -88,7 +85,6 @@ class Profile extends Component {
 
     handleFormSubmitPassions = event => {
         event.preventDefault();
-        console.log(event);
         if (this.state.passions) {
             API.saveAnswers({
                 answer: this.state.passions,
@@ -104,7 +100,6 @@ class Profile extends Component {
 
     handleFormSubmitValues = event => {
         event.preventDefault();
-        console.log(event);
         if (this.state.values) {
             API.saveAnswers({
                 answer: this.state.values,
@@ -120,7 +115,6 @@ class Profile extends Component {
 
     handleFormSubmitHelp = event => {
         event.preventDefault();
-        console.log(event);
         if (this.state.help) {
             API.saveAnswers({
                 answer: this.state.help,
@@ -137,10 +131,8 @@ class Profile extends Component {
 
     getUID = () => {
         firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                console.log('This is the user: ', user.uid)
-                this.setState({ ...user })
-                console.log(this.state.uid)
+            if (user) {                
+                this.setState({ ...user })                
             } else {
                 // No user is signed in.
                 console.log('There is no logged in user');
@@ -149,24 +141,13 @@ class Profile extends Component {
         });
     }
 
-
     //renders our forms
-    render() {
-        // firebase.auth().onAuthStateChanged(function (user) {
-        //     if (user) {
-        //         console.log('This is the user: ', user.uid)
-        //     } else {
-        //         // No user is signed in.
-        //         console.log('There is no logged in user');
-        //     }
-        // });
-
-
+    render() {     
         return (
             <div className="profileBackground">
                 <div className="container profileContainer">
                     <Row>
-                        <img src="./images/logo2.jpg" className="profileTitle"></img>
+                        <img src="./images/logo2.jpg" className="profileTitle" alt="ccss logo"></img>
                         <h1>Questionnaire</h1>
                     </Row>
                     <Nav />

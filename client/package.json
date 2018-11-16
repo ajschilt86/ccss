@@ -6,7 +6,6 @@
     "@blueprintjs/core": "^1.23.1",
     "axios": "^0.18.0",
     "base": "^3.0.0",
-    "chordsheetjs": "^2.8.1",
     "dotenv": "^6.1.0",
     "firebase": "^5.5.7",
     "re-base": "^3.2.3",

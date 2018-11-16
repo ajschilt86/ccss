@@ -22,4 +22,3 @@ export default () => (
         <SideNavItem href='/'>Home/Log Out</SideNavItem>
     </SideNav>
 )
-
