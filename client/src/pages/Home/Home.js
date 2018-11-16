@@ -119,7 +119,7 @@ class App extends Component {
             <Row>
               <Col s={12} className="grid-example">
                 <div className="mainPageParagraphThree">
-                  <img src="./images/chicagoBridgePic.jpg" height="250px" alt="bridge"></img>
+                  <img src="./images/chicagoBridge.jpg" height="250px" alt="bridge"></img>
                   <h1>Free Questionnaire</h1>
                   <p>
                     Answer 5 quick questions and then browse other people's
