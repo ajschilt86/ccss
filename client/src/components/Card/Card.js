@@ -1,7 +1,6 @@
 import React from "react";
-import { Row, Input, Col, Card } from "react-materialize";
+import { Col, Card } from "react-materialize";
 import "./Card.css"
-
 
 const Cards = props => {
   return (

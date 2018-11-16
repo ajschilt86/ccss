@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Redirect, Route, Switch, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Toaster, Intent } from "@blueprintjs/core";
-import { app, facebookProvider } from "../base";
-import Profile from "../pages/Profile";
+import { app } from "../base";
 
 const loginStyles = {
   width: "90%",
@@ -16,28 +15,10 @@ const loginStyles = {
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.authWithFacebook = this.authWithFacebook.bind(this);
     this.authWithEmailPassword = this.authWithEmailPassword.bind(this);
     this.state = {
       redirect: false
     };
-  }
-
-  authWithFacebook() {
-    app
-      .auth()
-      .signInWithPopup(facebookProvider)
-      .then((user, error) => {
-        if (error) {
-          this.toaster.show({
-            intent: Intent.DANGER,
-            message: "Unable to sign in with Facebook"
-          });
-        } else {
-          this.props.setCurrentUser(user);
-          this.setState({ redirect: true });
-        }
-      });
   }
 
   redirectFalse() {
@@ -94,8 +75,6 @@ class Login extends Component {
                 this.toaster = element;
               }}
             />
-            {/* <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button> */}
-            {/* <hr style={{marginTop: "10px", marginBottom: "10px"}}/> */}
             <form
               onSubmit={event => {
                 this.authWithEmailPassword(event);
@@ -146,81 +125,7 @@ class Login extends Component {
               />
             </form>
           </div>
-        );
-    
-
-    // if (this.state.redirect === true) {
-    //   console.log("huuuuuu");
-    //   // this.redirectFalse()
-    //   return (
-    //     // this.setState({ redirect: false }),
-    //     <Redirect to="/profile" />,
-    //     <Profile />  //comment    
-    //   );
-     
-    // } 
-    // if (this.state.redirect === false) {
-    //   return (
-    //     <div style={loginStyles}>
-    //       <Toaster
-    //         ref={element => {
-    //           this.toaster = element;
-    //         }}
-    //       />
-    //       {/* <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button> */}
-    //       {/* <hr style={{marginTop: "10px", marginBottom: "10px"}}/> */}
-    //       <form
-    //         onSubmit={event => {
-    //           this.authWithEmailPassword(event);
-    //         }}
-    //         ref={form => {
-    //           this.loginForm = form;
-    //         }}
-    //       >
-    //         <div
-    //           style={{ marginBottom: "10px" }}
-    //           className="pt-callout pt-icon-info-sign"
-    //         >
-    //           <h5>Note</h5>
-    //           If you don't have an account already, this form will create your
-    //           account.
-    //         </div>
-    //         <label className="pt-label">
-    //           Email
-    //           <input
-    //             style={{ width: "100%" }}
-    //             className="pt-input"
-    //             name="email"
-    //             type="email"
-    //             ref={input => {
-    //               this.emailInput = input;
-    //             }}
-    //             placeholder="Email"
-    //           />
-    //         </label>
-    //         <label className="pt-label">
-    //           Password
-    //           <input
-    //             style={{ width: "100%" }}
-    //             className="pt-input"
-    //             name="password"
-    //             type="password"
-    //             ref={input => {
-    //               this.passwordInput = input;
-    //             }}
-    //             placeholder="Password"
-    //           />
-    //         </label>
-    //         <input
-    //           style={{ width: "100%" }}
-    //           type="submit"
-    //           className="pt-button pt-intent-primary"
-    //           value="Log In"
-    //         />
-    //       </form>
-    //     </div>
-    //   );
-    // }
+        );     
   }
 }
 

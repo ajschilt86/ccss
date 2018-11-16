@@ -2,12 +2,10 @@ import axios from "axios";
 
 export default {
     getAnswersByUID: function (UID) {
-        console.log("hitting axios")
         return axios.get("/api/users/answers/all/" + UID)
     },
     getAll: function () {
         return axios.get("/all", function () {
-            console.log('Hitting get route');
         })
     },
     getAnswersByQuest: function (userAnswer) {
@@ -20,7 +18,6 @@ export default {
     },
     saveAnswers: function (userAnswer) {
         return axios.post("api/users/answers", userAnswer)
-            .then(console.log(userAnswer))
             .catch(err => console.log(err))
     },
     updateAnswer: function (id) {

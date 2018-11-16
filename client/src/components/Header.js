@@ -23,7 +23,7 @@ class Header extends Component {
             this.props.authenticated
               ? (
                 <div>
-                  <img src="./images/logo2.jpg" className="homeTitleLogout pt-align-left"></img>
+                  <img src="./images/logo2.jpg" className="homeTitleLogout pt-align-left" alt="ccss logo"></img>
                   <div className="pt-navbar-group pt-align-right">
                     <a href="/profile"><button className="pt-button pt-minimal pt-icon-annotation text-white logButton">Questionnaire</button></a>
                     <Link className="pt-button pt-minimal pt-icon-log-out logButton" to="/logout" aria-label="Log Out">Logout</Link>
@@ -32,7 +32,7 @@ class Header extends Component {
               )
               : (
                 <div>
-                  <img src="./images/logo2.jpg" className="homeTitleLogin pt-align-left"></img>
+                  <img src="./images/logo2.jpg" className="homeTitleLogin pt-align-left" alt="ccss logo"></img>
                   <div className="pt-navbar-group pt-align-right">
                     <Link className="pt-button pt-intent-success logButton" to="/login" style={{ color: "black" }}>Register/Log In</Link>
                   </div>

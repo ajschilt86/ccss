@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import { Row, Input, Button } from 'react-materialize';
 import API from "../../utils/API";
-import { List, ListItem } from "../../components/List";
-import { Link } from "react-router-dom";
+import { ListItem } from "../../components/List";
 import Cards from "../../components/Card";
 import "./Questions.css"
 import Nav from "../../components/Nav"
 import Footer from "../../components/Footer"
-
-
 
 class AnswerFeed extends Component {
     state = {
@@ -74,6 +70,5 @@ class AnswerFeed extends Component {
         )
     }
 }
-
 
 export default AnswerFeed;

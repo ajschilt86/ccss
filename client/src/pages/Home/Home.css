@@ -54,6 +54,12 @@
     font-size: 3em;
 }
 
+.homePageSignin-Out:hover {
+    transform: translateY(-10px);
+    animation: all .2s;
+    text-decoration: none;
+}
+
 .homeBody {
     max-Width: 1160px;
     margin: 0 auto;

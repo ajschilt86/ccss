@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Navbar, NavItem, Row, Col, Input, Button } from "react-materialize";
-import { BrowserRouter, Route, Redirect } from "react-router-dom";
+import { Row, Col} from "react-materialize";
+import { BrowserRouter, Route } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Login from "../../components/Login";
 import Logout from "../../components/Logout";
-import { app, base } from "../../base";
+import { app } from "../../base";
 import "./Home.css";
 
 class App extends Component {
@@ -25,7 +25,6 @@ class App extends Component {
         currentUser: user,
         authenticated: true
       });
-      console.log(this.state.currentUser);
     } else {
       this.setState({
         currentUser: null,
@@ -93,7 +92,7 @@ class App extends Component {
             <Row>
               <Col s={12} className="grid-example">
                 <div className="mainPageParagraphOne">
-                  <img src="./images/high-five.jpg" height="250px"></img>
+                  <img src="./images/high-fivePic.jpg" height="250px" alt="high-five"></img>
                   <h1>In hand new connections</h1>
                   <p>
                     We're three friends attending a Northwestern Bootcamp and we
@@ -109,7 +108,7 @@ class App extends Component {
             <Row>
               <Col s={12} className="grid-example">
                 <div className="mainPageParagraphTwo">
-                  <img src="./images/networking.jpg" height="250px"></img>
+                  <img src="./images/networkingPic.jpg" height="250px" alt="networking"></img>
                   <h1>Online Speed Networking</h1>
                   <p>
                     Networking can be time consuming and demanding. In order to make things easier and faster we've brought professional networking online to help people connect with each other. You don't need to show up after work or go to any events hoping to meet someone new. Our system is designed with the principals of speed networking in mind. You can quickly browse a list of responses to questions like "what are your skills" or "help wanted". This is a great way to get to know your local Chicago community!
@@ -120,7 +119,7 @@ class App extends Component {
             <Row>
               <Col s={12} className="grid-example">
                 <div className="mainPageParagraphThree">
-                  <img src="./images/chicagoBridge.jpg" height="250px"></img>
+                  <img src="./images/chicagoBridge.jpg" height="250px" alt="bridge"></img>
                   <h1>Free Questionnaire</h1>
                   <p>
                     Answer 5 quick questions and then browse other people's

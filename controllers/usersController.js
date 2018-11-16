@@ -13,6 +13,7 @@ module.exports = {
     findByQuest: (req, res) => {
         db.Answers
             .find({ question: req.params.id })
+            .sort({ date: -1 })
             .then(dbAnswers => res.json(dbAnswers))
             .catch(err => res.status(422).json(err));
     },
