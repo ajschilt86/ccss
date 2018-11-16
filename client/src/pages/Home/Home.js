@@ -82,7 +82,7 @@ class App extends Component {
         </BrowserRouter>
         <div className="homeContainer">
           <img
-            src="./images/chicago.jpg"
+            src="./images/chicagoBackground.jpg"
             width="100%"
             alt="chicago"
           />
